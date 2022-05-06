@@ -1,32 +1,59 @@
-/*edit by DeL1x, it's typical cntrl c + cntrl v, so it isn't so hard to create smth like this, kmp thanks.*/
+/* ==UserStyle==
+@name           VK.Dark
+@namespace      USO Archive
+@author         Eblan
+@description    `Loh pidr`
+@version        1.1.9.2
+@license        CC-BY-NC-4.0
+@preprocessor   uso
+@advanced dropdown Mini-Chat "Чаты" {
+	Visible "Показывать хуйню*" <<<EOT .FCPanel {
+    display: inherit;
+} EOT;
+Invisible "Не показывать хуйню" <<<EOT .FCPanel {
+    display: none;
+EOT; } 
+@advanced dropdown URL "Ну задник крч, долбанёшься" {
+default "Default*" <<<EOT https://media.discordapp.net/attachments/699506987632951328/963520512863113296/7hKnXP8DSgg.jpg EOT;
 
-{
+	URL-custom-dropdown "Custom" <<<EOT /*[[URL-custom]]*\/ EOT;
+}
+@advanced text URL-custom "Выбери задник, KEKW (Custom)" "https://example.com/image.png"
+
+}
+
+==/UserStyle== */
+@-moz-document domain('vk.com') {}
+@-moz-document regexp('https?://vk.com/(?!dev/|dev$|editapp?|editapp\?id=\d+|editapp\?act=\S+|support\?act=new_app&app_id=\d+|stats\?aid=\d+|apps.act=manage|about$|about.act=manage|ads$|ads.z=|jobs$|jobs.act=manage|ads/targeting$|ads/targeting.act=manage|ads/company_page$|ads/company_page.act=manage|jobs$|ads/special_projects$|products.w=|products$|messenger$).*')  {
 	body,
 	html[dir],
 	[dir] #page_wrap {
-		background: url(https://sun9-71.userapi.com/s/v1/ig2/mIeBcWssiVQNPeX9ueawG9YDWXaPP1VWwDLlGAQWIa2sRfY-SBw3rumTywkMv0Jf5K5Gb92BlO3MNN5VGYEBgTDo.jpg?size=2560x1440&quality=95&type=album) no-repeat fixed center 0 !important;
-		background-size: cover;
-		background-color: #19191A;
+	background: url("/*[[URL]]*/") no-repeat center top fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 	}
+}
 	:root {
 		--color1: #b7771d;
-		--color2: #e67b2a9e;
-		--color3: #22251fa6;
+		--color2: #e67b2ae8;
+		--color3: #25231fa6;
 		/*MAIN-Bg*/
 		--color4: #313131;
 		--color5: #a68760;
-		--color6: #8c8c8c;
+		/*Text-color*/
+		--color6: wheat;
 		--color7: rgba(29, 29, 29, .9);
-		--color8: #bb601b;
-		/*#b2c4d0*/
-		--color9: #d18632;
-		/*Hover*/
-		--filter1: invert(0.9)hue-rotate(0deg)brightness(1.6)saturate(2);
-		/*Br*/
-		--filter2: invert(0.9)hue-rotate(0deg)brightness(2)saturate(5);
-		/*Br2*/
-		--filter3: invert(0.9)hue-rotate(0deg)brightness(1.2)saturate(1);
-		/*Drk*/
+		--color8: #ca6c24;
+		--color9: #c4711e;
+		/*I just like test this shit*/
+		--filter1: invert(0)hue-rotate(0deg)brightness(1)saturate(1);
+		/*I just like test this shit*/
+		--filter2: invert(0)hue-rotate(0deg)brightness(1)saturate(1);
+		/*I just like test this shit*/
+		--filter3: invert(0)hue-rotate(0deg)brightness(1)saturate(1);
+		/*I just like test this shit*/
 	}
 	html {
 		scrollbar-color: var(--color4) var(--color3) !important;
@@ -399,6 +426,7 @@
 	[dir] .mv_live_gifts_supercomment::before,
 	[dir] .article_ed_layer .article_ed_layer__header .article_ed_layer__publish:hover {
 		filter: var(--filter3);
+		color: var(--color2);
 	}
 	[dir] .radiobtn::before,
 	.olist_checkbox,
@@ -407,7 +435,7 @@
 		filter: invert(0.9)hue-rotate(0deg)brightness(1.4)saturate(1);
 	}
 	[dir] .search_filters_minimized_text {
-		filter: var(--filter3);
+		color: var(--color2);
 		background-color: transparent;
 	}
 	.top_nav_btn#top_audio .top_nav_btn_icon,
@@ -475,7 +503,7 @@
 	a.ui_header_ext_search,
 	[dir] .deep_active .wl_replies_block_wrap .replies_wrap_deep .replies_next,
 	.photos_choose_upload_area_label {
-		color: #3d668abd !important;
+		color: var(--color2) !important;
 	}
 	.StickerImage__image,
 	.sticker_animation.animation_play,
@@ -517,8 +545,9 @@
 	/*
 [dir] input.ui_search_field {
 background-image: url('https://i.imgur.com/it8oyMZ.png');
-*/
 }
+*/
+
 [dir] .im-page--back-btn:hover {
 	background: url('data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%2216%22%20viewBox%3D%220%200%209%2016%22%20width%3D%229%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m8%2015.9c-.2%200-.4-.1-.6-.3l-7-7c-.3-.3-.3-.9%200-1.2l7-7c.3-.3.9-.3%201.2%200s.3.9%200%201.2l-6.4%206.4%206.4%206.4c.3.3.3.9%200%201.2-.2.2-.4.3-.6.3z%22%20fill%3D%22%23828a99%22%20opacity%3D%22.7%22%2F%3E%3C%2Fsvg%3E') 15px 16px no-repeat, linear-gradient(90deg, var(--color4) 50%, var(--color4));
 }
@@ -527,14 +556,14 @@ background-image: url('https://i.imgur.com/it8oyMZ.png');
 [dir="ltr"] .author_page_up .author_page_back,
 .CallsSearchResult__icon,
 .audio_page__audio_rows .audio_row.audio_has_lyrics .audio_row__title_inner,
-.nim-dialog .nim-dialog--preview-attach {
-	color: var(--color5);
-}
+.nim-dialog .nim-dialog--preview-attach,
 .im-right-menu .im-page--dialogs-new-ui-banner--title,
-.im-right-menu .im-page--dialogs-new-ui-banner--text {
+.im-right-menu .im-page--dialogs-new-ui-banner--text,
+.friends_phonebook .friends_field,
+.friends_field,
+.ui_tab_count {
 	color: var(--color5);
 }
-
 .post_video_title,
 .selector_container td.selector input.selected,
 .result_list ul li,
@@ -544,7 +573,26 @@ a.BOG-sGGMdzobJMS6tQopc:nth-child(1) > div:nth-child(1) > div:nth-child(2) > spa
 a._1w0AGD82rdttcKaAh5SX0w:nth-child(3) > div:nth-child(1) > div:nth-child(2) > span:nth-child(1),
 .EcosystemAccountMenu_link__sDStv,
 a.EcosystemAccountMenu_buttonBalance__l5QQb:nth-child(1) > div:nth-child(1) > div:nth-child(2) > span:nth-child(1),
-a.EcosystemAccountMenu_button__DdUAl:nth-child(3) > div:nth-child(1) > div:nth-child(2) > span:nth-child(1) {
+a.EcosystemAccountMenu_button__DdUAl:nth-child(3) > div:nth-child(1) > div:nth-child(2) > span:nth-child(1),
+.friends_find_user_label,
+.VKPayHero__text,
+.friends_field .group_link,
+.right_list_link,
+.vkuiBanner__subheader,
+.notify_sources_tt_content .line_cell .info.group_notify_add_source_button,
+.nim-dialog.nim-conversation-search-row .nim-dialog--name .nim-dialog--name-w,
+.pv_album_name a,
+.pv_counter,
+.VideoCardMenu__itemIcon,
+[dir] .pv_cont .pv_no_commments_placeholder,
+[dir] .pv_cont .pv_closed_commments_placeholder,
+.post_video_views_count,
+.post_video_views_count a,
+.app_actions_menu_wrap .ui_actions_menu_item_accent,
+.app_actions_menu_wrap .ui_actions_menu_item_accent .ui_actions_menu_item_icon, 
+.app_actions_menu_wrap .ui_actions_menu_item_with_icon .ui_actions_menu_item_icon,
+.right_list_link, .right_list_field .group_link,
+.photos_album_intro h1 {
 	color: var(--color2) !important;
 }
 a,
@@ -997,9 +1045,52 @@ a.ts_search_link,
 .vkuiInput--sizeY-compact .vkuiInput__el,
 [dir="ltr"] .wall_module .reply_box div.submit_post_field,
 [dir="ltr"] .wall_module .reply_box div.submit_post_field[contenteditable="true"],
-[dir="ltr"] .im-page--dialogs-search.ui_search_custom .ui_search_field {
+[dir="ltr"] .im-page--dialogs-search.ui_search_custom .ui_search_field,
+.media_selector .MediaSelector__mediaIcon,
+.SitpostingEntrypoint__button,
+.BestFriendsSettingsEntrypoint__button,
+.EcosystemServicesNavigationDropdown_button__99Wn9,
+.mention_tt_extra a,
+.MenuList--subList .MenuList__itemText,
+.MenuList--subList .MenuList__item:hover .MenuList__itemText,
+.MenuList--subList .MenuList__item--active .MenuList__itemText,
+.MenuList--subList .MenuList__item:hover .MenuList__itemIcon,
+.MenuList--subList .MenuList__item--active .MenuList__itemIcon,
+.MenuList--subList .MenuList__itemIcon,
+.wall_module .wd_lnk,
+.like_wrap.lite .PostButtonReactions__title,
+.like_wrap.lite .like_button_label,
+.like_wrap.lite .like_button_count,
+.emoji_smile_icon.emoji_smile_icon_inline_svg,
+.PostOption,
+.post_action_image_btn,
+.module_header .header_count,
+.bd_arrow_a,
+.PageActionsClosedProfile__icon,
+.im-page .im-page--dialogs-filter.im-page--dialogs-filter_disabled,
+.friends_user_info_actions_menu_item_icon,
+.friends_import_row,
+.VideoCardMenu__itemLabel,
+.audio_layer_container .audio_page__footer_now_playing_link,
+.Main__footer .Main__footerLink,
+.Post__copyrightLink,
+.ClassifiedsSearchFilters__locationButtonIcon,
+[dir] .Select--secondary .Select__control,
+.ClassifiedsSearchFilters__input.Select--secondary.Select--empty .Select__placeholder,
+.ItemProperties__label,
+.vkuiLink,
+.ItemActions__itemText,
+.ItemActions__itemIcon.ItemActions__actionIcon,
+#pv_tags span,
+.settings_apps .apps_settings_action_edit, .settings_apps .apps_settings_action_remove,
+.im_msg_audiomsg--collapse_toggle,
+.im-page .im-page--clear-recent,
+.vkc__Agreements__agreement a,
+.vkuiActionSheetItem__before,
+.MarketItemsList--viewType-cards .MarketItemsList__itemTitle, .MarketItemsList--narrow .MarketItemsList__itemTitle {
 	color: var(--color2);
 }
+
 body,
 .current_text,
 .profile_info .labeled,
@@ -1199,6 +1290,64 @@ input.big_text,
 .EcosystemServicesNavigationBase_wrapper__XhPER,
 .EcosystemServicesNavigationBase_header__F-4Pt,
 .im-page .im-page--dialogs-archive-notice--text,
+.im-page--title-meta,
+.im-mess .im-mess--text .im_srv_lnk,
+.im-mess .im-mess--text .im_srv_mess_link,
+[dir] .VideoInfoPanel__action,
+.owner_photo_bubble,
+.VideoEmptyStub__text,
+.VideoGrid__separator,
+.VideoCard__additionalInfo,
+[dir] .mv_playlist .mv_playlist_header_subscribe_btn,
+[dir] .mv_playlist .mv_playlist_header_subscribe_btn:hover,
+.mv_playlist .mv_playlist_header .mv_playlist_header_title,
+.mv_playlist .VideoRecomsItem__title,
+#mv_pl_tt .mv_tt_playlist,
+.VideoLayerInfo__views,
+.mv_playlist .VideoRecomsItem__views,
+.VideoRecomsItem__author,
+.VideoRecomsItem__views,
+.VideoLayerInfo__date,
+.mv_playlist .mv_playlist_header .mv_playlist_header_videos_cnt,
+[dir] div.submit_post_field ~ .placeholder .ph_content,
+[dir] div.submit_post_field[contenteditable="true"] ~ .placeholder .ph_content,
+.GroupsRecommendationsBlock__listRowFieldStatus,
+.search_row .labeled,
+.bd_header_month,
+.bd_day_num,
+.box_x_button,
+.DonutCatalogPromo__text,
+.mv_chat_message_text,
+.profile_info_row .label,
+.profile_label_link,
+.audio_page_player2 .audio_page_player_duration,
+.im-page .im-page--mess-search,
+.audio_restriction_box__content,
+.CatalogBlock__audio_friends .PlaceholderSmall__text,
+.box_title_wrap.box_white .box_title,
+.wall_module .reply_date,
+.friends_common_label,
+a:hover,
+.settings_text_grey,
+.pedit_label,
+.pedit_label_box,
+.no_rows,
+.MyQuestionsModalHeader__title,
+.MyQuestionsModalEmptyStub__title,
+.MyQuestionsModalEmptyStub__subtitle,
+.audio_layer_container .audio_page__footer,
+.ClassifiedsSearchFilters__title,
+.ItemStats,
+#pv_date_info,
+.docs_item_additional_info,
+#pv_tags,
+.wdd_add3,
+.im-mess .im-mess--check,
+.im-mess .im-mess--fav, .im-mess .im-mess--reply, .im-mess .im-mess--forward, .im-mess .im-mess--edit,
+.audio_pl_edit_box .ape_pl_stat,
+.audio_pl_edit_box .ape_add_pl_audios_btn .ape_add_audios_btn_music_icon,
+.audio_page_player2 .audio_page_player_title_song_subtitle,
+.MarketItemsList__itemRowMainContent,
 .MEConfig {
 	color: var(--color6)
 }
@@ -1223,7 +1372,6 @@ h2,
 .AudioPlaylistSnippet h1.AudioPlaylistSnippet__title--main,
 .gifts_section_header,
 h4.gifts_section_header,
-.wdd_add3,
 .help_tile__all,
 .help_table_questions__title,
 .tickets_header,
@@ -1305,7 +1453,6 @@ body.new_header_design .TopSearch .input_back_content,
 .wk_header,
 .groups_edit_event_log_page .groups_edit_event_log_items_wrap .groups_edit_event_log_item_label,
 .bd_day_head,
-.Banner__text,
 .PageGroupMenu___marketBadgeNew.PageGroupMenu___marketBadgeNew--show,
 #group_contact_name.subheader,
 .stats_cont_browse_tile,
@@ -1371,13 +1518,22 @@ input.dark,
 .vkuiButton--lvl-tertiary.vkuiButton--clr-accent,
 .vkuiBanner,
 [dir="ltr"] .im-page .im-page--dialogs-folder-button--text,
-.MyGamesCloudLanding__headerTitle {
+.MyGamesCloudLanding__headerTitle,
+[dir] .search_filter_main,
+[dir] .search_filter_open,
+[dir] .search_filter_shut,
+.SubsCard__condition,
+.vkuiSimpleCell__indicator,
+.mem_pseudolink,
+.header_right_link,
+.top_profile_vkconnect_descr,
+[dir] #stl_text,
+.photos_album_intro .photos_album_intro_info {
 	color: var(--color1);
 }
 /*==============================COLORS=========================================*/
 .page_name,
 h1.page_name,
-.audio_pl_snippet2 .audio_pl_snippet__description,
 .wall_reply_text > a.mem_link,
 a.wall_reply_greeting,
 .im_sticker_bl_desc,
@@ -1386,30 +1542,69 @@ a.wall_reply_greeting,
 .PodcastEpisodeLayer__fullTitle,
 .StickerStylesMenuItem__price,
 .im-mess .im-mess--fav:active,
-.VideoCard__ownerLink {
-	color: #be731f;
-}
+.VideoCard__ownerLink,
 .top_audio_player_btn svg,
 .TopNavBtn .TopNavBtn__icon,
 .PanelHeaderButton.Main__close,
 .ui_search_new .ui_search_button_search,
-.im-page--dialogs-header-control {
-	color: var(--color1);
-}
-.Qtp6iAIhvWY0T7Al3my1z,
-.EcosystemAccountMenu_name__1wHzk {
-	color: #ca7d1e !important;
-}
+.im-page--dialogs-header-control,
+.friends_find_user_add,
+.LeftMenu__icon,
+.VideoEmptyStub__title,
 div.profile_online,
 .im_sticker_bl_name,
 .im_stickers_my_name,
 .mem_special,
 .mention_tt_row.mention_tt_online,
-.StickerStylesMenuItem__title {
-	color: #db861c;
+.StickerStylesMenuItem__title,
+a.ui_crumb,
+.im-page .im-page--dialogs-new-ui-notice--title,
+.ServicesCard__title,
+[dir="ltr"] .im-page .im-page--dialogs-folder-button--icon,
+.vkuiHeader__subtitle,
+.im-page-pinned--name,
+.like_views--inActionPanel,
+.like_views__icon,
+.PostBottomAction--withBg .PostBottomAction__icon,
+.PostBottomAction--withBg .PostBottomAction__icon,
+.PostBottomAction--withBg .PostBottomAction__icon,
+.PostButtonReactions--post .PostButtonReactions__title,
+[dir="ltr"] .PostBottomAction__count,
+[dir="ltr"] .PostBottomAction__label,
+.ui_calendar_icon,
+.im-page .im-page--center-empty-icon,
+.im-page--inline-menu--button-icon,
+.im-page .im-page--center-empty,
+.BannerItem--viewType-promo_banners_slider .BannerItem__title,
+.MyQuestionsModalEmptyStub__icon,
+.SearchProduct__storeName,
+.AuthorCell .vkuiLink {
+	color: var(--color1);
 }
+
+.Qtp6iAIhvWY0T7Al3my1z,
+.EcosystemAccountMenu_name__1wHzk,
+.post_date,
+.post_date .post_link,
+.post_date .wall_text_name_explain_promoted_post,
+.wall_module .published_by_date,
+.wall_module .wall_post_source,
+.audio_restriction_box__icon,
+.left_menu_nav,
+.page_block_header_count,
+.ServicesCard__descr,
+.AuthorCell .vkuiLink:hover,
+.ItemGeo__title,
+.im-mess.im-mess_fav .im-mess--fav, .im-mess.im-mess_fav:hover .im-mess--fav,
+.im-send-btn__icon--edit,
+.photos_album_reverse_btn,
+.vkuiPlaceholder__header,
+.PageActionCell--md-accent .PageActionCell__icon {
+	color: var(--color2) !important;
+}
+
 [dir="ltr"] .current_audio_icon {
-	color: #2083b5;
+	color: #e4a42d;
 }
 .cal_table .inactive_day,
 .page_actions_cont.narrow .page_actions_header_inner,
@@ -1419,8 +1614,38 @@ div.profile_online,
 	color: #4a4a4a;
 }
 .disabled.selector_container td.selector input,
-.FlatButton--secondary {
-	color: whitesmoke;
+.FlatButton--secondary,
+[dir] .feed_new_posts > b,
+.FlatButton--overlay-primary,
+.audio_w_covers .audio_row .audio_row__performers,
+.audio_page_player2 .audio_page_player_title_performer,
+.audio_pl_snippet2 .audio_pl_snippet__info_line,
+.audio_pl_snippet2 .audio_pl_snippet__description,
+.audio_row .audio_row__duration,
+.audio_pl_snippet2 .audio_pl_snippet__stats,
+[dir] .VideoEmptyStub__actionButton--primary,
+[dir] .VideoEmptyStub__actionButton--primary:hover,
+.page_list_module .group_desc,
+.group_row_info,
+.FlatButton--secondary:not(.disable):hover,
+.LinkSnippet__text,
+.BannerItem--viewType-promo_banners_slider .BannerItem__text,
+.BannerItem--viewType-promo_banners_slider .BannerItem__subtext,
+[dir] .slider_hint.audio_player_hint,
+.no_posts_cover,
+.nim-dialog.nim-dialog_muted .nim-dialog--mute,
+.audio_friend_audios_count,
+.audio_friend_now,
+.MarketSearchFilters__title,
+.ItemName,
+.ItemPrice__actual,
+.vkuiButton--lvl-secondary,
+.apps_access_item,
+.audio_row .audio_row__title_inner_subtitle,
+.vkuiPlaceholder__text,
+.right_list_field,
+.audio_numeric .audio_row .audio_row__counter {
+	color: var(--color6);
 }
 [dir] .group1,
 [dir] .group2,
@@ -1436,7 +1661,8 @@ div.profile_online,
 .ConvoRecommendList__removeItem {
 	color: #422f1c;
 }
-.selector_input.focused {
+.selector_input.focused,
+[dir] .flat_button.secondary {
 	color: var(--color6) !important;
 }
 #payments_box.payments_money_transfer_box .payments_money_transfer_link_copy_input {
@@ -1450,17 +1676,20 @@ div.profile_online,
 .VideoActions__item,
 .DonutCatalogPromo__title,
 [dir="ltr"] .link_arrowed_bottom,
-.vkuiActionSheetItem {
+.vkuiActionSheetItem,
+.vkuiSimpleCell__description,
+.friends_actions_menu .friends_actions_icons,
+.GroupsRecommendationsBlock__listRowField .right_list_title:hover,
+.page_counter .label,
+.Select--secondary.Select--empty .Select__placeholder,
+.page_counter:not([href]):not([onclick]) .count,
+.audio_pl_edit_box .ape_audios_empty_list .ape_audios_empty_list_icon,
+.pv_cont .pv_no_commments_placeholder_icon,
+.audio_numeric .audio_row .audio_row__sound_bars {
 	color: var(--color2);
 }
-.im-page .im-page--dialogs-new-ui-notice--title,
-.ServicesCard__title,
-[dir="ltr"] .im-page .im-page--dialogs-folder-button--icon {
-	color: var(--color1);
-}
+
 /*==========================COLOR-HOVER=====================================*/
-a:hover,
-.page_counter:hover .label,
 [dir] .ui_tab_sel:hover,
 [dir] .ui_tab:hover,
 .pv_cont .pv_bottom_actions > a:hover,
@@ -1517,7 +1746,6 @@ a .app_widget_tiles_title:hover,
 .GameCatalogSearchCard__name:focus,
 .GameCatalogSearchCard__name:active,
 .Button--secondary:hover,
-.Button--primary:not(.Button--disabled):hover,
 .audio_page__footer_clear_playlist._audio_page__footer_clear_playlist:hover,
 .CatalogSection .video_item .video_item_info .video_item_author a,
 [dir] .LinkButton:hover,
@@ -1608,7 +1836,6 @@ a.app_widget_matches_match:hover,
 .help_table_question_act:hover,
 [dir] .round_button.round_button_large_white:hover,
 .StickersCatalogLeftMenuItemBanner__enable:hover,
-.FlatButton--secondary:not(.disable):hover,
 .help_legal_information_content .wikiVkLink:hover,
 .landing_transparencySection__wiki a.wikiVkLink:hover,
 .landing_transparencySection_rules .landing_transparencySection__next:hover,
@@ -1658,14 +1885,30 @@ a.app_widget_matches_match:hover,
 .im-page--inline-menu--button-text:hover,
 .im-page .im-page--dialogs-archive-notice--button:hover,
 .FCIconButton:hover,
-.stories_feed_cont:hover .stories_feed_settings {
-	color: var(--color5);
+.stories_feed_cont:hover .stories_feed_settings,
+.ui_search_new .ui_search_button_control,
+.SitpostingEntrypoint__button:hover,
+.BestFriendsSettingsEntrypoint__button:hover,
+.ui_actions_menu_item_app_author_inner a,
+._audio_section__search .audio_row.audio_has_lyrics .audio_row__title_inner,
+audio_row .audio_row__cover_icon .audio_row__play_btn_icon--pause {
+	color: var(--color2);
 }
 .post_video_title:hover,
 .result_list ul li.active,
 a.im-mess-stack--lnk:hover,
-.audio_owner_item__title.audio_item__title > a:hover {
+.audio_owner_item__title.audio_item__title > a:hover,
+.post_header_subscribe_button_icon {
 	color: var(--color5) !important;
+}
+[dir] .flat_button.ui_load_more_btn.smaller:hover,
+.GroupsRecommendationsBlock__listRowField .right_list_title:hover,
+.page_counter:hover .label,
+.Button--primary:not(.Button--disabled):hover,
+.ui_actions_menu--actionSheet .ui_actions_menu_item,
+.apps_options_bar_right .ui_actions_menu_wrap .ui_actions_menu_item_app_author .ui_actions_menu_item_app_author_inner,
+.page_counter:not([href]):not([onclick]):hover .label {
+	color: var(--color6);
 }
 /*============================BG=======================================*/
 [dir] .scrollbar_inner:hover,
@@ -1687,7 +1930,12 @@ a.im-mess-stack--lnk:hover,
 [dir] .graph_menu_item.graph_menu_item_sel:hover,
 [dir] .im-navigation--label-in,
 [dir] .ugcintro__accept:hover,
-[dir] .im-replied::before {
+[dir] .im-replied::before,
+[dir] .VideoEmptyStub__actionButton--primary,
+[dir] .VideoEmptyStub__actionButton--primary:hover,
+[dir] .vkuiButton--lvl-primary,
+[dir] .vkuiButton--lvl-secondary,
+[dir] .flat_button.ui_load_more_btn.smaller:hover {
 	background: var(--color1);
 }
 [dir] .PlaylistPanel__itemAction,
@@ -1697,7 +1945,11 @@ a.im-mess-stack--lnk:hover,
 [dir] .wk_wall_archive__tabs,
 [dir="ltr"] .pv_cont .pv_reply_form_wrap .reply_form,
 [dir] .pv_cont .pv_reply_form_wrap .wall_module .reply_box,
-[dir] .MyGamesCloudLanding__promoCards {
+[dir] .MyGamesCloudLanding__promoCards,
+[dir] .wall_module .reply_box,
+.EcosystemServicesNavigationDropdown_popout__NYAnq,
+[dir] .flat_button.ui_load_more_btn.smaller,
+[dir] .im-mess.im-mess_unread:not(.im-mess_light) .im_post_top_info_caption {
 	background: var(--color3);
 }
 .vkuiActionSheet--desktop {
@@ -1709,14 +1961,32 @@ a.im-mess-stack--lnk:hover,
 	background-color: #383d45;
 }
 
-[dir] .FlatButton--overlay-primary {
+[dir] .FlatButton--overlay-primary,
+[dir] .apps_access_icon {
 	background: var(--color2);
 }
+
+.settings_alert .header {
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	background: #bd845b;
+	background-color: rgb(189, 132, 91);
+	background-position-x: 0%;
+	background-position-y: 0%;
+	background-repeat: repeat;
+	background-attachment: scroll;
+	background-image: none;
+	background-size: auto;
+	background-origin: padding-box;
+	background-clip: border-box;
+}
+
 
 [dir] .VideoActions__item--secondary:hover {
 	background-color: var(--color3);
 	color: var(--color1);
 }
+
 [dir] .flat_button,
 [dir] .button_gray button,
 [dir] .button_blue button,
@@ -1778,9 +2048,17 @@ a.im-mess-stack--lnk:hover,
 [dir] .nim-dialog.nim-dialog_unread.nim-dialog_unread-out:not(.nim-dialog_failed) .nim-dialog--unread,
 [dir] .nim-dialog.nim-dialog_unread-out.nim-dialog_muted:not(.nim-dialog_failed) .nim-dialog--unread,
 [dir] .emoji_shop_icon_badge,
-[dir] .nim-dialog:not(.nim-dialog_deleted).nim-dialog_muted.nim-dialog_selected {
+[dir] .nim-dialog:not(.nim-dialog_deleted).nim-dialog_muted.nim-dialog_selected,
+[dir] .im-popular--unread {
 	background: var(--color2);
+	color: var(--color6);
 }
+
+[dir="ltr"] .im_msg_audiomsg--transcription-auto .im_msg_audiomsg--collapse_content {
+	background-image: linear-gradient(to right, var(--color3), var(--color3) calc(100% - 18px), transparent calc(100% - 8px));
+	color: var(--color6);
+}
+
 [dir] .page_block,
 [dir] input.text,
 [dir] input.search,
@@ -1973,7 +2251,19 @@ a.im-mess-stack--lnk:hover,
 [dir] .im-mess .im_post_top_info_caption,
 [dir] .mv_live_gifts_arrow_left::before,
 [dir] .mv_live_gifts_arrow_right::before,
-.EcosystemServicesNavigationBase_wrapper__XhPER {
+.EcosystemServicesNavigationBase_wrapper__XhPER,
+[dir] .poster__btns-wrapper,
+[dir] .im-page .im-page--mess-search,
+[dir] .box_title_wrap.box_white,
+[dir] .nim-dialog.nim-dialog_unread.nim-dialog_muted .nim-dialog--unread-badge_bomb,
+[dir] .nim-dialog.nim-dialog_unread.nim-dialog_muted .nim-dialog--unread,
+[dir] .nim-dialog.nim-dialog_unread.nim-dialog_prep-injected.nim-dialog_muted .nim-dialog--unread-badge_bomb,
+[dir] .nim-dialog.nim-dialog_unread.nim-dialog_prep-injected.nim-dialog_muted .nim-dialog--unread,
+[dir] .nim-dialog.nim-dialog_failed.nim-dialog_muted .nim-dialog--unread-badge_bomb,
+[dir] .nim-dialog.nim-dialog_failed.nim-dialog_muted .nim-dialog--unread,
+[dir] .BaseBoxHeader,
+[dir] .MyQuestionsModal,
+[dir] .app_ui_actions_menu.ui_actions_menu {
 	background: var(--color3);
 }
 ._3nkNC0nOut45P4pyFllZcd {
@@ -2102,7 +2392,8 @@ a.im-mess-stack--lnk:hover,
 [dir] .mv_live_gifts_arrow_left,
 [dir] .mv_live_gifts_arrow_right,
 [dir] .top_ecosystem_navigation_separator,
-[dir] .nim-dialog:not(.nim-dialog_deleted).nim-dialog_selected {
+[dir] .nim-dialog:not(.nim-dialog_deleted).nim-dialog_selected,
+[dir] .ShortVideoStub__qrLink:hover {
 	background: var(--color4);
 }
 [dir] .round_button.round_button_large_white:hover,
@@ -2160,24 +2451,51 @@ a.im-mess-stack--lnk:hover,
 }
 .vkuiFormField:focus-within .vkuiFormField__border,
 .vkuiFormField :focus ~ .vkuiFormField__border,
-.vkuiChipsInput--focused .vkuiFormField__border {
+.vkuiChipsInput--focused .vkuiFormField__border,
+[dir] .slider_hint.audio_player_hint {
 	background: transparent;
 	border-color: var(--color1);
 }
-
-[dir] .stl_active.over_fast #stl_bg {
-	background-color: var(--color3);
+settings_alert .text {
+	background: #313131;
+	background-color: rgb(49, 49, 49);
+	background-position-x: 0%;
+	background-position-y: 0%;
+	background-repeat: repeat;
+	background-attachment: scroll;
+	background-image: none;
+	background-size: auto;
+	background-origin: padding-box;
+	background-clip: border-box;
+	padding: 25px 25px 15px;
+	font-size: 13px;
+	line-height: 19px;
 }
-[dir] .VideoLayout__asideFooter {
-	background: var(--color3);
+
+settings_alert .footer {
+	border-top: 1px solid #7b7474;
+	background: #313131;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	padding: 14px;
+}
+
+[dir] .stl_active.over_fast #stl_bg,
+[dir] .VideoLayout__asideFooter,
+[dir] .VideoSearchInput .eltt,
+[dir] .deep_active .replies .reply_box,
+[dir] .bd_day_head.day6,
+[dir] .bd_day_head.day7 {
+	background-color: var(--color3);
 }
 [dir] .VideoActions__item {
 	background: var(--color3);
 	color: var(--color1);
 }
-
 .friends_field_title a,
-.friends_possible_block .right_list_title {
+.friends_possible_block .right_list_title,
+.audio_page_layout .audio_page__add_playlist_btn,
+.audio_page_layout .audio_page__add_audio_btn {
 	color: var(--color1);
 }
 [dir] .ui_tabs.ui_tabs_sliding .ui_tabs_slider,
@@ -2194,11 +2512,10 @@ a.im-mess-stack--lnk:hover,
 [dir] .audio_page_player2 .audio_page_player_track_slider.slider.slider_size_1 .slider_back,
 [dir] .bd_arrow:hover,
 [dir] .FlatButton--secondary,
-[dir] .FlatButton--primary {
+[dir] .FlatButton--primary,
+[dir] .VideoInfoPanel__action,
+[dir] .mv_playlist .mv_playlist_header_subscribe_btn {
 	background-color: var(--color1);
-}
-[dir] .deep_active .replies .reply_box {
-	background: var(--color3)
 }
 
 [dir] .button_gray button,
@@ -2277,7 +2594,10 @@ a.im-mess-stack--lnk:hover,
 [dir] .audio_page_player2 .audio_page_player_track_slider.slider.slider_size_1 .slider_amount,
 [dir] .MenuList__itemCounter,
 .flat_button.fl_r.secondary_dark.SaveToDocsButton,
-[dir] .VideoLayerInfo__authorPhoto {
+[dir] .VideoLayerInfo__authorPhoto,
+[dir] .mv_playlist .mv_playlist_header_subscribe_btn:hover,
+[dir] .flat_button.secondary,
+[dir] .nim-dialog .nim-dialog--unread-badge {
 	background-color: var(--color2);
 }
 [dir] #page_header_cont,
@@ -2318,7 +2638,6 @@ a.im-mess-stack--lnk:hover,
 [dir] .im-page_classic .im-popular--avatar,
 [dir] .ChatSettingsPresetPanel,
 [dir] .wk_history_tabs,
-[dir] .audio_pl_snippet2,
 [dir] .audio_page_player2.audio_page_player_fixed,
 [dir] .mail_box_single_ava .mail_box_single_ava_img::after,
 [dir] .mail_box_single_ava .mail_box_single_ava_img::before,
@@ -2446,13 +2765,13 @@ a.im-mess-stack--lnk:hover,
 [dir] .wl_post_body_wrap .thumbed_link:last-child:not(.PostTintedAttach),
 [dir] .wl_post_body_wrap .media_link:last-child:not(.PostTintedAttach),
 [dir] #mv_box._has_recomms:not(._hide_recomms) .mv_info_narrow_column,
-.FCWindow__header {
+.FCWindow__header,
+[dir] .mv_playlist,
+[dir] .VideoRecomsItem,
+[dir] body.new_header_design .TopSearch__input {
 	background-color: var(--color3);
 }
-[dir] body.new_header_design .TopSearch__input {
-	background-color: var(--color3)
-}
-[dir] .flat_button.secondary,
+
 [dir] .CatalogBlock__separator,
 [dir] .audio_page_player2 .audio_page_player__cover,
 [dir] .BannerItem,
@@ -2567,7 +2886,8 @@ a.im-mess-stack--lnk:hover,
 [dir] .box_controls .flat_button.secondary,
 Button.Button--tertiary.Button--size-m,
 [dir] .FiltersItem,
-.flat_button.secondary.stats_cont_browse_tile_button_tip {
+.flat_button.secondary.stats_cont_browse_tile_button_tip,
+[dir] .audio_pl_snippet2 {
 	background-color: #282828;
 }
 [dir] .im-navigation--to-end .im-navigation__button,
@@ -2591,10 +2911,16 @@ Button.Button--tertiary.Button--size-m,
 [dir] .PageSection--gradient::before {
 	background-image: inherit;
 }
-[dir] .deep_active .replies .reply_box_inner_wrap.fixed {
+[dir] .deep_active .replies .reply_box_inner_wrap.fixed, 
+.vkc__Agreements__pageBox {
 	background-color: transparent;
 }
+.vkc__PassportBox__onlyCol {
+	background-color: rgba(0, 0, 0, .28)
+}
+
 /*=========================BG-HOVER====================================*/
+[dir] .VideoInfoPanel__action:hover,
 [dir] .flat_button.secondary:hover,
 [dir] .flat_button.secondary.hover,
 [dir] .button_gray button:hover,
@@ -2712,6 +3038,10 @@ Button.Button--tertiary.Button--size-m,
 [dir] .PostBottomAction {
 	background-color: #4f4f4f59;
 }
+[dir] .im-page-pinned,
+[dir] .Select--secondary .Select__control {
+	background: var(--color3)
+}
 
 [dir] .idd_popup .idd_item:active,
 .photos_container_albums .photos_album_thumb {
@@ -2754,6 +3084,17 @@ Button.Button--tertiary.Button--size-m,
 .top_ecosystem_navigation_image.icon_with_broder {
 	border-radius: 15px;
 }
+[dir] .im-page .im-page--mess-search {
+	border-top: 1px solid var(--color3);
+	border-bottom: 1px solid var(--color3);
+}
+
+[dir] .ItemActions__item--clickable {
+	padding-top: 12px;
+}
+.vkc__PassportBox__box {
+	border: none;
+}
 [dir] .ui_toggler::after,
 [dir] .payments_money_transfer_amount_wrap,
 [dir] .fakeinput,
@@ -2770,6 +3111,10 @@ Button.Button--tertiary.Button--size-m,
 [dir] .fc_tab {
 	border: 0 solid var(--color4);
 }
+[dir] .VideoSearchInput .eltt {
+	border-color: var(--color2);
+}
+
 [dir] .bp_post,
 [dir] .settings_privacy_row {
 	border: solid var(--color4);
@@ -2778,7 +3123,8 @@ Button.Button--tertiary.Button--size-m,
 [dir] .Switch__input:checked + .Switch__indicator::before,
 [dir] .bd_day_cell.today .bd_day_events,
 [dir] .bd_day_cell.holiday.today .bd_day_events,
-.AttachWall__link--post {
+.AttachWall__link--post,
+[dir] .ShortVideoStub__qrLink {
 	border: 1px solid var(--color2);
 }
 [dir] .page_actions_wrap,
@@ -2894,9 +3240,7 @@ Button.Button--tertiary.Button--size-m,
 [dir] .group_friends_image,
 [dir] .ts_contact_photo.online::after,
 [dir] span.fc_contact_photo.online::after,
-[dir] .ConvoRecommendList__removeItem {
-	border: 2px solid var(--color3);
-}
+[dir] .ConvoRecommendList__removeItem,
 [dir] .photos_container .photos_row {
 	border: 2px solid var(--color3);
 }
@@ -2930,7 +3274,10 @@ Button.Button--tertiary.Button--size-m,
 [dir] .chat_tab_imgcont.online::after,
 [dir] .chat_tab_wrap:hover .chat_tab_imgcont.online::after,
 [dir] a.fc_contact_over span.fc_contact_photo.online::after,
-[dir] .pv_box .photos_container .photos_row {
+[dir] .pv_box .photos_container .photos_row,
+[dir] .UiEntityMiniatures__itemImage,
+[dir] .bd_day_head.day6,
+[dir] .bd_day_head.day7 {
 	border-color: var(--color3);
 }
 [dir] .ui_tabs.ui_tabs_box,
@@ -3005,7 +3352,9 @@ Button.Button--tertiary.Button--size-m,
 [dir] .ui_actions_menu::before,
 [dir] .ui_actions_menu::after,
 [dir] .tt_default.tt_up::before,
-[dir] .tt_default.tt_up::after {
+[dir] .tt_default.tt_up::after,
+[dir] .im-page-pinned,
+[dir] .BlockSearchInput.BlockSearchInput {
 	border-bottom-color: var(--color2);
 }
 [dir] .top_notify_cont .feedback_row_menu .ui_actions_menu::before,
@@ -3055,9 +3404,6 @@ Button.Button--tertiary.Button--size-m,
 [dir="ltr"] .fc_tab_pointer.fc_tab_pointer_peer::after,
 [dir="ltr"] .fc_tab_pointer::after {
 	border-left-color: var(--color4);
-}
-[dir] .left_menu_nav_wrap {
-	border-top: 1px solid var(--color4);
 }
 [dir] .counts_module,
 [dir] .profile_info_block,
@@ -3216,7 +3562,8 @@ Button.Button--tertiary.Button--size-m,
 [dir] .top_ecosystem_navigation_bottom,
 [dir] .nim-dialog:not(.nim-dialog_deleted).nim-dialog.nim-dialog_hovered,
 [dir] .nim-dialog:not(.nim-dialog_deleted).nim-dialog_hovered + .nim-dialog,
-.BotKeyboard--full {
+.BotKeyboard--full,
+[dir] .VideoSubheader--withTopSeparator {
 	border-top: 1px solid var(--color4);
 }
 [dir] .nim-dialog:not(.nim-dialog_deleted).nim-dialog.nim-dialog_selected.nim-dialog_hovered,
@@ -3226,7 +3573,9 @@ Button.Button--tertiary.Button--size-m,
 [dir] .nim-dialog:not(.nim-dialog_deleted).nim-dialog_hovered.nim-dialog_selected + .im-search-results-head,
 [dir] .nim-dialog:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic.nim-dialog_selected + .im-search-results-head,
 [dir] .nim-dialog:not(.nim-dialog_deleted).nim-dialog_selected:hover + .im-search-results-head,
-[dir] .nim-dialog:not(.nim-dialog_deleted).nim-dialog_selected + .im-search-results-head {
+[dir] .nim-dialog:not(.nim-dialog_deleted).nim-dialog_selected + .im-search-results-head,
+[dir] .PlaylistPanel__header,
+[dir] .ItemPostingSource {
 	border-top: 1px solid var(--color2);
 }
 [dir] .eltt.eltt_top.eltt_arrow_size_normal > .eltt_arrow_back,
@@ -3241,7 +3590,8 @@ Button.Button--tertiary.Button--size-m,
 	border-bottom: 0 solid var(--color4);
 }
 [dir] a.wk_ext_link:hover,
-[dir] .bd_day_head {
+[dir] .bd_day_head,
+[dir] .ClassifiedsSearchFilters__locationSeparator {
 	border-bottom: 1px solid var(--color2);
 }
 [dir] #page_header_cont,
@@ -3657,8 +4007,30 @@ Button.Button--tertiary.Button--size-m,
 [dir] .PortalNavigationDropdown {
 	box-shadow: 0 2px 96px var(--color2);
 }
-[dir] .wk_wall_archive__tabs .ui_tabs {
+[dir] .wk_wall_archive__tabs .ui_tabs,
+[dir] .BaseBoxHeader,
+[dir] .ItemActions:not(:last-child) {
 	border-bottom: 1px solid var(--color2);
+}
+[dir] .settings_bl_row {
+	border-bottom: 1px solid var(--color3);
+}
+[dir] .PortalNavigationDropdown .more_div,
+[dir] .ItemProperties,
+[dir] .ItemCardLayout__bottom {
+	border-top: 1px solid var(--color2);
+}
+
+.vkuiCard--md-outline::before {
+	border: none;
+}
+
+.bd_calendar {
+	--cell-border: 1px solid var(--color2);
+}
+
+.nim-dialog.nim-dialog_pinned + .nim-dialog:not(.nim-dialog_pinned) {
+	position: static
 }
 
 #ads_left {
@@ -3669,8 +4041,6 @@ Button.Button--tertiary.Button--size-m,
 /*[dir] .chat_onl_wrap, [dir="ltr"] .ui_scroll_default_theme.ui_scroll_emoji_theme > .ui_scroll_overflow > .ui_scroll_shadow_top, [dir="ltr"] .ui_scroll_default_theme.ui_scroll_emoji_theme > .ui_scroll_overflow > .ui_scroll_shadow_bottom, [dir="ltr"] .emoji_cats_title_helper::after, .page_block.ShortVideoFeedBlock, .page_block.feed_groups_recomm, [dir] .search_auto_results .search_auto_sep .search_auto_sep_inner, [dir] .page_photo.ProfileActions .page_actions_expanded, .FCPanel, .ConvoRecommendList, .page_block.MarketItemsFeedBlock, #top_ecosystem_navigation_link, ._3CdmeXZ_jkzxxlpanS-ygT > .BOG-sGGMdzobJMS6tQopc, #block_aliexpress-recommendations-carousel, .stories_feed_cont, #stories_feed_wrap, [dir] .ownerButton, .EcosystemServicesNavigationDropdown_dropdown__Vggfr {
 display: none !important;
 }
-/*=========================================================================*/
-/*IMAGES*/
 [dir] .im-chat-placeholder {
 	background: url("https://i.imgur.com/tc8I6Qe.png") no-repeat 50%;
 	position: relative;
@@ -3684,6 +4054,10 @@ display: none !important;
 [dir] .privacy_locked {
 	background: url("https://i.imgur.com/bKMSOCk.png") no-repeat 0 2px;
 }
+[dir] .notify_sources_tt_content .line_cell .cell_add_source_icon {
+	background: var(--color1) url(data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20width%3D%2216%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22m0%200h16v16h-16z%22%2F%3E%3Cpath%20d%3D%22m9%209v4c0%20.5522847-.44771525%201-1%201s-1-.4477153-1-1v-4h-4c-.55228475%200-1-.44771525-1-1s.44771525-1%201-1h4v-4c0-.55228475.44771525-1%201-1s1%20.44771525%201%201v4h4c.5522847%200%201%20.44771525%201%201s-.4477153%201-1%201z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E) no-repeat center;
+}
+
 /*VK_top link*/
 html body.firefox.new_header_design div#page_wrap.scroll_fix_wrap._page_wrap div div.scroll_fix div#page_header_cont.page_header_cont div#page_header_wrap.page_header_wrap header#page_header.p_head.p_head_l0 ul#top_nav.HeaderNav li.HeaderNav__item.HeaderNav__item--logo a.TopHomeLink {
 	color: transparent;
@@ -3692,231 +4066,57 @@ html body.firefox.new_header_design div#page_wrap.scroll_fix_wrap._page_wrap div
 }
 /*SVG_Images*/
 /*Ivent_back*/
-.wall_module .post_event_info {
-	background: var(--color4) url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2240%22%20height%3D%2240%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20fill%3D%22%2365BF63%22%20d%3D%22M20%200c11.046%200%2020%208.954%2020%2020s-8.954%2020-20%2020S0%2031.046%200%2020%208.954%200%2020%200z%22%2F%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M19.983%2011C15.572%2011%2012%2014%2012%2018.6c0%203.4%203.782%208.4%206.093%2011.2%201.47%201.6%201.89%201.6%203.361%200%202.311-2.8%206.093-8%206.093-11.2.21-4.6-3.362-7.6-7.564-7.6zm-.205%2011.429c-2.08%200-3.536-1.701-3.536-3.615%200-2.126%201.664-3.614%203.536-3.614%201.871%200%203.535%201.7%203.535%203.614s-1.664%203.615-3.535%203.615z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat 12px/40px;
-}
-/*Signed*/
-[dir] .wall_signed_by {
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%228%22%20height%3D%229%22%20viewBox%3D%2220%20203%208%209%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20style%3D%22fill%3A%234c8c4c%3B%22%3E%3Cpath%20d%3D%22M24%20209c3.5%200%204%201%204%202.5%200%20.5%200%20.5-1%20.5h-6c-1%200-1%200-1-.5%200-1.5.5-2.5%204-2.5zm0-1c-1.1%200-2-1.12-2-2.5s.9-2.5%202-2.5%202%201.12%202%202.5-.9%202.5-2%202.5z%22%2F%3E%3C%2Fsvg%3E")
-}
-/*Audio_Shuffle*/
-[dir] .audio_page_player2 .audio_page_player_shuffle.audio_page_player_btn_enabled .btn_icon,
-[dir] .audio_pl_snippet2 .audio_shuffle_all_button::before {
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%3Cpath%20d%3D%22M18%208.9h-3.5c-1.014%200-1.896.9-3.758%203.61C8.479%2015.8%207.402%2016.9%205.5%2016.9H3a.9.9%200%200%201%200-1.8h2.5c1.014%200%201.896-.9%203.758-3.61C11.521%208.2%2012.598%207.1%2014.5%207.1H18V5.511a.502.502%200%200%201%20.824-.386l2.996%202.491a.503.503%200%200%201%200%20.773l-2.996%202.492a.503.503%200%200%201-.824-.387V8.9zm-5.966%204.377c1.046%201.336%201.72%201.823%202.466%201.823H18v-1.589a.502.502%200%200%201%20.824-.386l2.996%202.491a.503.503%200%200%201%200%20.773l-2.996%202.492a.503.503%200%200%201-.824-.387V16.9h-3.5c-1.36%200-2.299-.562-3.55-2.086a58.818%2058.818%200%200%200%201.084-1.537zM9.05%209.186a58.818%2058.818%200%200%200-1.084%201.537C6.92%209.387%206.246%208.9%205.5%208.9H3a.9.9%200%201%201%200-1.8h2.5c1.36%200%202.299.562%203.55%202.086z%22%20fill%3D%22%234c8c4c%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-/*Audio_Repeat_Once*/
-[dir] .audio_page_player2 .audio_page_player_repeat.audio_page_player_btn_repeat_one .btn_icon {
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22m0%200h24v24h-24z%22%2F%3E%3Cg%20transform%3D%22translate(4%204)%22%3E%3Cpath%20d%3D%22m11.8238049.12495295%202.9958684%202.49146374c.2133774.17745177.242501.49428145.0650492.70765889-.0196485.0236264-.0414228.04540069-.0650492.06504919l-2.9958684%202.49146374c-.2133775.17745177-.5302072.14832826-.7076589-.06504918-.0750541-.09024902-.116146-.20392513-.116146-.32130486v-4.98292748c0-.27752309.2249769-.5025.5025-.5025.1173797%200%20.2310558.04109188.3213049.11614596zm-7.64759736%2010.00000005-2.99586845%202.4914637c-.21337744.1774518-.24250095.4942814-.06504918.7076589.0196485.0236264.04142278.0454007.06504918.0650492l2.99586845%202.4914637c.21337745.1774518.53020712.1483283.70765889-.0650492.07505408-.090249.11614597-.2039251.11614597-.3213048v-4.9829275c0-.2775231-.22497692-.5025-.5025-.5025-.11737973%200-.23105584.0410919-.32130486.116146z%22%20fill%3D%22%234c8c4c%22%20fill-rule%3D%22nonzero%22%2F%3E%3Cpath%20d%3D%22m0%207.03094093c0-2.5%201.5-4%204-4h7.5%22%20stroke%3D%22%234c8c4c%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.8%22%2F%3E%3Cpath%20d%3D%22m17%209.03094093c0%202.49999997-1.5%203.99999997-4%203.99999997h-8.5%22%20stroke%3D%22%234c8c4c%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.8%22%2F%3E%3Cpath%20d%3D%22m9%205h-1l-2%201v1h1.5v4h.5%201z%22%20fill%3D%22%234c8c4c%22%20fill-rule%3D%22nonzero%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-}
-/*Audio_Repeat_All*/
-[dir] .audio_page_player2 .audio_page_player_repeat.audio_page_player_btn_enabled .btn_icon {
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%0A%20%20%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%234c8c4c%22%20d%3D%22M15.824%204.125l2.996%202.491a.503.503%200%200%201%200%20.773l-2.996%202.492A.503.503%200%200%201%2015%209.494V4.511a.502.502%200%200%201%20.824-.386zm-7.648%2010L5.18%2016.616a.503.503%200%200%200%200%20.773l2.996%202.492A.502.502%200%200%200%209%2019.494v-4.983a.502.502%200%200%200-.824-.386z%22%2F%3E%0A%20%20%20%20%3Cpath%20stroke%3D%22%234c8c4c%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.8%22%20d%3D%22M4%2011.03c0-2.5%201.5-4%204-4h7.5m5.5%206c0%202.5-1.5%204-4%204H8.5%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
-}
-/*Audio_Prev*/
-[dir] .audio_page_player2 .audio_page_player_prev .icon {
-	background: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%229%22%20height%3D%2210%22%20viewBox%3D%220%200%209%2010%22%3E%3Cpath%20fill%3D%22%234c8c4c%22%20fill-rule%3D%22evenodd%22%20d%3D%22M2%204.709V.596A.604.604%200%200%200%201.4%200H.6C.27%200%200%20.267%200%20.596v8.808c0%20.33.278.596.6.596h.8c.331%200%20.6-.267.6-.596V5.291c.033.04.074.079.123.114L8.19%209.803c.447.324.81.138.81-.408V.604c0-.55-.359-.735-.81-.408L2.123%204.594A.65.65%200%200%200%202%204.71z%22%2F%3E%3C%2Fsvg%3E");
-}
-/*Audio_Next*/
-[dir] .audio_page_player2 .audio_page_player_next .icon {
-	background: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%229%22%20height%3D%2210%22%20viewBox%3D%220%200%209%2010%22%3E%3Cpath%20fill%3D%22%234c8c4c%22%20fill-rule%3D%22evenodd%22%20d%3D%22M7%204.709V.596C7%20.266%207.278%200%207.6%200h.8c.331%200%20.6.267.6.596v8.808a.604.604%200%200%201-.6.596h-.8a.598.598%200%200%201-.6-.596V5.291a.653.653%200%200%201-.123.114L.81%209.803c-.447.324-.81.138-.81-.408V.604c0-.55.359-.735.81-.408l6.067%204.398A.65.65%200%200%201%207%204.71z%22%2F%3E%3C%2Fsvg%3E");
-}
-/*Audio_Icon_Play*/
-[dir] .audio_page_player2 .audio_page_player_play .icon {
-	background: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2228%22%20height%3D%2229%22%20viewBox%3D%220%200%2028%2029%22%3E%3Cg%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M11.8%2019.9C11.4%2020.2%2011%2020%2011%2019.5L11%208.5C11%208%2011.4%207.8%2011.8%208.1L19.5%2013.6C19.9%2013.8%2019.8%2014.2%2019.5%2014.4L11.8%2019.9Z%22%20fill%3D%22%23000%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-	background-color: var(--color4);
-}
-/*Audio_Play_Hover*/
-[dir] .top_audio_play.shuffle .top_audio_play__button:hover::after {
-	background: url(data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2213%22%20height%3D%2212%22%20viewBox%3D%220%200%2013%2012%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M10%203.6h-.524c-1.585%200-2.58%201.385-3.717%202.778C4.495%207.928%203.367%2010%20.826%2010H0V8.4h.826c1.519-.037%202.46-1.632%203.575-3C5.666%203.853%206.936%202%209.484%202H10V0l3%202.75-3%202.75V3.6zm0%204.8V6.5l3%202.75L10%2012v-2h-.516c-1.603%200-2.7-.733-3.609-1.662A57.729%2057.729%200%200%201%206.84%206.92c.76.844%201.562%201.48%202.636%201.48H10zM3.282%205.18C2.57%204.32%201.822%203.625.826%203.6H0V2h.826c1.566%200%202.595.787%203.45%201.753l-.494.706c-.168.238-.335.48-.5.722z%22%20fill%3D%22%23000%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E) no-repeat;
-}
-/**/
-[dir] .top_audio_play__button::after {
-	background: url("data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%2210%22%20viewBox%3D%220%200%207%2010%22%20width%3D%227%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m.797%209.836c-.44.327-.797.152-.797-.41v-8.852c0-.554.353-.74.797-.411l5.962%204.42c.31.23.31.603%200%20.833z%22%20fill%3D%22%23000%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E");
-}
-/*Audio_Covers*/
-[dir] .audio_w_covers .audio_row .audio_row__cover {
-	background: #1a1a19 url("data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22m0%200h24v24h-24z%22%20opacity%3D%22.4%22%2F%3E%3Cpath%20d%3D%22m13%2011.4849987v5.6482897c0%204.5123987-.8747233%205.3834431-4.37440289%205.8421935-1.6682259.2186769-3.62559711-.5384568-3.62559711-3.1617096%200-1.2814037.80181302-2.498263%202.46114282-2.8162494%201.26723039-.2428462-.09078118.0181935%202.77607228-.5140396.6959753-.1292083.7748413-.3782301.7748413-.908791%200-.2664094-.0013183-2.5951438-.0022416-4.1936475l-.0073943-.0003862v-4.31781414s-.0054461-2.05827203%200-3.08739758c.0065136-1.23086488.6796458-1.68321833%202.6637921-2.08397579%200%200%203.0232113-.57396781%204.6852252-.87541989.367783-.06670761.6485622.07018054.6485622.49202579%200%200-.0106774%202.62210108%200%204.05433854.0031006.41590408-.168424.60420104-.5899711.67902227-1.6816987.29848801-4.8649278.86036181-4.8649278.86036181-.3738792.09182758-.5451011.35499958-.5451011.73329156z%22%20fill%3D%22%234c8c4c%22%20fill-rule%3D%22nonzero%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat 50%;
-}
-/*Audio_Icon_Pause*/
-[dir] .audio_page_player2 .audio_page_player_play.audio_playing .icon {
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%2229%22%20viewBox%3D%2236%200%2028%2029%22%20width%3D%2228%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m46%208.6c0-.3.3-.6.6-.6h1.8c.3%200%20.6.3.6.6v10.8c0%20.3-.3.6-.6.6h-1.8c-.3%200-.6-.3-.6-.6zm5%200c0-.3.3-.6.6-.6h1.8c.3%200%20.6.3.6.6v10.8c0%20.3-.3.6-.6.6h-1.8c-.3%200-.6-.3-.6-.6z%22%20fill%3D%22%23000%22%2F%3E%3C%2Fsvg%3E");
-}
-/*Audio_Mic*/
-[dir] .audio_page_layout .audio_block_small_item.artist_no_image .audio_block_small_item__img {
-	background-color: #464649;
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22m0%200h24v24h-24z%22%20opacity%3D%22.1%22%2F%3E%3Cpath%20d%3D%22m13.0127481%2014.5071369-6.09698577%205.0808215c-.70632675.5886056-1.7449414.541493-2.39507757-.1086432-.65013616-.6501361-.69724878-1.6887508-.10864315-2.3950775l5.0808215-6.0969858c.65889199%201.5895578%201.93032719%202.860993%203.51988499%203.519885zm2.4872519-1.5071369c-2.4852814%200-4.5-2.0147186-4.5-4.5%200-2.48528137%202.0147186-4.5%204.5-4.5s4.5%202.01471863%204.5%204.5c0%202.4852814-2.0147186%204.5-4.5%204.5z%22%20fill%3D%22%234c8c4c%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-}
-/*Audio_Pause*/
-[dir] .audio_row.audio_row__playing .audio_row__play_btn {
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%234c8c4c%22%2F%3E%3Cpath%20fill%3D%22%23000%22%20d%3D%22M8%207.596c0-.33.277-.596.607-.596h1.786c.335%200%20.607.267.607.596v8.808a.605.605%200%200%201-.607.596H8.607A.602.602%200%200%201%208%2016.404V7.596zm5%200c0-.33.277-.596.607-.596h1.786c.335%200%20.607.267.607.596v8.808a.605.605%200%200%201-.607.596h-1.786a.602.602%200%200%201-.607-.596V7.596z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-}
-/*Group_Listen*/
-[dir] .group_subscribe_channel_block .group_online_answer_pict::after {
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%227%22%20height%3D%2211%22%20viewBox%3D%220%200%207%2011%22%3E%3Cg%20fill%3D%22%234c8c4c%22%3E%3Cpath%20opacity%3D%22.5%22%20d%3D%22M.4%203.5c.1.1.2.3.4.5.2.5.4%201%20.4%201.5s-.1%201-.4%201.4c-.2.3-.3.5-.4.6-.4.4-.4.9%200%201.3s.9.4%201.3%200c.2-.2.4-.5.7-.9.4-.8.6-1.5.6-2.4s-.2-1.6-.6-2.3c-.3-.4-.5-.8-.7-.9-.4-.4-.9-.4-1.3%200s-.3.9%200%201.2z%22%2F%3E%3Cpath%20opacity%3D%22.25%22%20d%3D%22M3.9%201.5c.1.2.3.5.6%201%20.4.8.7%201.8.7%203%200%201.1-.3%202.1-.7%202.9-.3.6-.5.9-.6%201.1-.3.4-.3.9%200%201.3s.9.4%201.3%200c.3-.3.6-.8%201-1.5.4-1.1.8-2.3.8-3.8s-.4-2.7-.9-3.8c-.4-.7-.7-1.2-1-1.4-.3-.3-.9-.3-1.3%200s-.3.9.1%201.2z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-}
-/*Audio_Play_Button*/
-[dir] .audio_row .audio_row__play_btn,
+/*=========================================================================*/
+/*IMAGES*/
+/*play button in music post*/
 [dir] .audio_pl_snippet2 .audio_pl_snippet__action_btn_listen::before {
-	background: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%234c8c4c%22%2F%3E%3Cpath%20fill%3D%22%23000%22%20d%3D%22M9.846%2016.86c-.467.303-.846.097-.846-.45V7.588c0-.551.38-.752.846-.45l6.91%204.48c.324.21.327.549%200%20.761l-6.91%204.48z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")
+	background-image: url(https://cdn.discordapp.com/attachments/699506987632951328/969588634095321179/index.png) 
 }
-/*Audio_Play_Button_Hover*/
-.audio_pl_snippet2 .audio_pl_snippet__action_btn_listen:hover::before {
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%2355c255%22%2F%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M9.846%2016.86c-.467.303-.846.097-.846-.45V7.588c0-.551.38-.752.846-.45l6.91%204.48c.324.21.327.549%200%20.761l-6.91%204.48z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+/*profile_warming_img*/
+[dir="ltr"] .profile_warning_img {
+	background-image: url(https://cdn.discordapp.com/attachments/699506987632951328/969627504488882286/add_info_icons.png)  
 }
-/*Audio_Img*/
+/*page_verified*/
+[dir="ltr"] .page_verified {
+	background: url(https://cdn.discordapp.com/attachments/699506987632951328/969629933859123220/index.png)  no-repeat 0 center;
+}
+/*add_row*/
+[dir="ltr"] .pedit_add_row {
+	background: url(https://cdn.discordapp.com/attachments/699506987632951328/969642477348880414/add_row.png) no-repeat 0 50%;
+}
+/*music icon for no cover*/
 [dir] .audio_page_player2 .audio_page_player__cover {
-	background-image: url("https://cdn.discordapp.com/attachments/699506987632951328/968604304745332756/1.png");
+	background: url(https://cdn.discordapp.com/attachments/699506987632951328/969646595681452062/index.png)  no-repeat center;
 }
-/*Audio_Play_Bmin*/
-[dir] .audio_w_covers .audio_row .audio_row__cover_icon {
-	background-image: url("https://i.imgur.com/C5kDjoP.png");
+/*check box*/
+[dir] .checkbox.on::before {
+	background: url(https://cdn.discordapp.com/attachments/699506987632951328/969648445038149632/index.png)  no-repeat center;
 }
-/*Audio_Stop_Bmin*/
-[dir] .audio_w_covers .audio_row.audio_row__playing .audio_row__cover_icon {
-	background-image: url("https://cdn.discordapp.com/attachments/699506987632951328/968592958641291274/2.png");
-}
-/*Audio_no_IMG*/
-[dir] .audio_pl_item2 .audio_pl__cover {
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%2272%22%20viewBox%3D%220%200%2072%2072%22%20width%3D%2272%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22m0%200h72v72h-72z%22%2F%3E%3Cpath%20d%3D%22m42.5%2018h-33c-.82842712%200-1.5.6715729-1.5%201.5s.67157288%201.5%201.5%201.5h33c.8284271%200%201.5-.6715729%201.5-1.5s-.6715729-1.5-1.5-1.5zm0%2012h-33c-.82842712%200-1.5.6715729-1.5%201.5s.67157288%201.5%201.5%201.5h33c.8284271%200%201.5-.6715729%201.5-1.5s-.6715729-1.5-1.5-1.5zm-33%2015c-.82842712%200-1.5-.6715729-1.5-1.5s.67157288-1.5%201.5-1.5h23c.8284271%200%201.5.6715729%201.5%201.5s-.6715729%201.5-1.5%201.5zm44.5%201.2665767c0%209.0247975-1.7494466%2010.7668864-8.7488058%2011.684387-3.3364518.4373539-7.2511942-1.0769136-7.2511942-6.3234191%200-2.5628074%201.603626-4.996526%204.9222856-5.6324987%202.5344608-.4856924-.1815623.0363869%205.5521446-1.0280794%201.3919505-.2584165%201.5496826-.75646%201.5496826-1.8175819%200-.5328188-.0026365-5.1902877-.0192719-8.3880674v-8.6356283s-.010892-4.116544%200-6.1747951c.0130272-2.4617298%201.3592916-3.3664367%205.3275843-4.1679516%200%200%206.0464225-1.1479356%209.3704503-1.7508398.7355662-.1334152%201.2971245.1403611%201.2971245.9840516%200%200-.0213548%205.2442021%200%208.1086771.0062012.8318081-.3368479%201.208402-1.1799422%201.3580445-3.3633975.596976-9.7298555%201.7207236-9.7298555%201.7207236-.7477585.1836552-1.0902023.7099992-1.0902023%201.4665831z%22%20fill%3D%22%234c8c4c%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-	background-repeat: no-repeat;
-	background-position: center;
-}
-/*Group_Subscribe*/
-[dir] .group_subscribe_channel_block .group_online_answer_pict {
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20fill%3D%22%234c8c4c%22%20d%3D%22M8%2011c5%200%205.2%204%207%204%20.8%200%201-.5%201-1v-13c0-.5-.2-1-1-1-2%200-2%204-7%204h-5c-4%200-4%207%200%207h.9c.1%200%20.2%200%20.2.1.7%201.4.8%201.6%201.2%203.2l.1.5.1.3.2.3c.3.2.5.3.9.3s.8-.1%201-.4c.5-.6.4-1.7-.1-4%200-.1.1-.3.2-.3h.3z%22%2F%3E%3C%2Fsvg%3E");
-}
-/*Group_Message*/
-[dir] .page_photo.page_action_menu_groups .page_actions_item.group_send_msg_status_block::before {
-	opacity: 1;
-	filter: none;
-	margin-top: 5px;
-	background-color: transparent;
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cdefs%3E%3Cpath%20d%3D%22M9.8205%2017.927c-.9375.855-2.519%201.559-4.7444%202.112a.2852.2852%200%200%201-.3182-.415v.0001c.8366-1.51%201.3306-2.7108%201.482-3.6024C4.853%2014.7455%204%2013.0095%204%2011.0967%204%207.1774%207.5817%204%2012%204s8%203.1773%208%207.0968c0%203.9194-3.5817%207.0967-8%207.0967a8.962%208.962%200%200%201-2.1795-.2666z%22%20id%3D%22a%22%2F%3E%3C%2Fdefs%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20opacity%3D%22.1%22%20d%3D%22M0%200h24v24H0z%22%2F%3E%3Cpath%20opacity%3D%22.1%22%20d%3D%22M0%200h24v24H0z%22%2F%3E%3Cg%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke%3D%22%234c8c4c%22%3E%3Cpath%20d%3D%22M9.9542%2018.472c-1.0224.8397-2.6067%201.5178-4.7575%202.0523a.7852.7852%200%200%201-.8762-1.1425c.731-1.3195%201.1888-2.3867%201.3749-3.1885C4.2951%2014.8108%203.5%2013.0109%203.5%2011.0968%203.5%206.887%207.318%203.5%2012%203.5s8.5%203.387%208.5%207.5968c0%204.2097-3.818%207.5967-8.5%207.5967a9.4885%209.4885%200%200%201-2.0458-.2214z%22%2F%3E%3Cpath%20stroke-width%3D%22.8%22%20d%3D%22M5.113%2019.8086a30.2978%2030.2978%200%200%201-.0052.0093.115.115%200%200%200%20.0112-.0287zm.122-.2226c2.0316-.5278%203.4716-1.1845%204.316-1.9546l.1585-.1446.2082.0521A8.562%208.562%200%200%200%2012%2017.7935c4.2073%200%207.6-3.0096%207.6-6.6967C19.6%207.4096%2016.2073%204.4%2012%204.4s-7.6%203.0096-7.6%206.6968c0%201.747.763%203.3904%202.1108%204.6305l.1599.1472-.0364.2142c-.1524.8972-.6194%202.059-1.3994%203.4973z%22%20stroke-linejoin%3D%22square%22%2F%3E%3Cuse%20xlink%3Ahref%3D%22%23a%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-}
-/*Scroll_UP*/
-[dir] .deep_active .replies .replies_wrap_deep .replies_deep_collapse .replies_deep_collapse_icon {
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3Eup_12%3C%2Ftitle%3E%3Cg%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M0%200H12V12H0z%22%2F%3E%3Cpath%20d%3D%22M5.248%201.338a.997.997%200%200%201%20.665-.334.998.998%200%200%201%20.794.289l4%204a1%201%200%201%201-1.414%201.414L7%204.414v5.59c0%20.55-.444.996-1%20.996-.552%200-1-.456-1-.995v-5.59L2.707%206.706a1%201%200%200%201-1.414-1.414l3.955-3.955z%22%20fill%3D%22%234c8c4c%22%20opacity%3D%22.5%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-}
-/*Scroll_DOWN*/
-[dir] .deep_active .replies .replies_wrap_deep .replies_next {
-	background: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3Edown_12%3C%2Ftitle%3E%3Cg%20transform%3D%22matrix(1%200%200%20-1%200%2012)%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M0%200H12V12H0z%22%2F%3E%3Cpath%20d%3D%22M5.248%201.338a.997.997%200%200%201%20.665-.334.998.998%200%200%201%20.794.289l4%204a1%201%200%201%201-1.414%201.414L7%204.414v5.59c0%20.55-.444.996-1%20.996-.552%200-1-.456-1-.995v-5.59L2.707%206.706a1%201%200%200%201-1.414-1.414l3.955-3.955z%22%20fill%3D%22%234c8c4c%22%20opacity%3D%22.5%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat;
-}
-/*VK_top_Sign*/
-.top_home_link.top_home_ny_logo .top_home_logo {
-	background: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2046%2022.94%22%3E%3Cdefs%3E%3Cstyle%3E.a%2C.b%7Bfill%3A%234c8c4c%7D.a%7Bfill-rule%3Aevenodd%7D%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cpath%20class%3D%22a%22%20d%3D%22M31.13%2011.4c-.73%201.09-1.28%201.87-1.28%201.87-.37.6-.52.89%200%201.56.37.52%201.59%201.56%202.41%202.52a14.94%2014.94%200%20013%204.1c.24%201-.26%201.49-1.26%201.49h-3.5c-1.33%200-1.73-1.06-4.1-3.44-2.08-2-3-2.26-3.48-2.26-.71%200-.92.2-.92%201.2v3.14c0%20.86-.28%201.36-2.5%201.36-3.71%200-7.78-2.25-10.68-6.4C4.49%2010.45%203.3%205.86%203.3%204.94c0-.52.2-1%201.2-1H8c.89%200%201.23.39%201.57%201.36%201.71%205%204.59%209.34%205.78%209.34.45%200%20.65-.2.65-1.33V8.16c-.13-2.38-1.39-2.57-1.39-3.42a.84.84%200%2001.89-.8H21c.74%200%201%20.4%201%201.29v6.93c0%20.74.33%201%20.55%201%20.45%200%20.82-.26%201.64-1.07a22.32%2022.32%200%20002.56-3.67z%22%2F%3E%3Cpath%20class%3D%22b%22%20d%3D%22M36.13%2010.07a1.45%201.45%200%2001.6%201%201.46%201.46%200%2001-.26%201.11%201.51%201.51%200%2001-2.09.37l-9.51-6.7a1.45%201.45%200%2001-.6-1%201.46%201.46%200%2001.26-1.11%201.51%201.51%200%20012.09-.37z%22%2F%3E%3Cpath%20d%3D%22M26.49%203.29c3.77-3.93%208.32-3.94%2011.35-2.13a8.31%208.31%200%20012.3%2012.49c-.36.47-.77.44-.64%200%20.64-2.12.62-3-.32-3.71a2.45%202.45%200%2000-2.86.31z%22%20fill%3D%22%2395df0b%22%2F%3E%3Cpath%20class%3D%22b%22%20d%3D%22M39.5%2012.94a1.5%201.5%200%20011.5%201.5%201.5%201.5%200%2001-1.5%201.5%201.5%201.5%200%2001-1.5-1.5%201.5%201.5%200%20011.5-1.5z%22%2F%3E%3Cpath%20d%3D%22M30.56%2012.25l-4.34-3c.18-.3.36-.59.52-.87l4.39%203z%22%20style%3D%22isolation%3Aisolate%22%20fill%3D%22%234a76a8%22%20opacity%3D%22.12%22%20fill-rule%3D%22evenodd%22%2F%3E%3Cpath%20d%3D%22M41.5%2022.94a.5.5%200%2011.5-.5.5.5%200%2001-.5.5zm-37%200a.5.5%200%2011.5-.5.5.5%200%2001-.5.5zm19-2a.5.5%200%2011.5-.5.5.5%200%2001-.5.5zm-23%202a.5.5%200%20010-1%20.5.5%200%20010%201zm6-3a.5.5%200%2011.5-.5.5.5%200%2001-.5.5zm-2-4a.5.5%200%2011.5-.5.5.5%200%2001-.5.5zm41%207a.5.5%200%2011.5-.5.5.5%200%2001-.5.5zm-6-3a.5.5%200%2011.5-.5.5.5%200%2001-.5.5zm-3-1a.5.5%200%2011.5-.5.5.5%200%2001-.5.5z%22%20fill%3D%22%234c8c4c%22%20fill-rule%3D%22evenodd%22%2F%3E%3Cpath%20class%3D%22a%22%20d%3D%22M9%2022.94a1%201%200%20111-1%201%201%200%2001-1%201zm17%200a1%201%200%20111-1%201%201%200%2001-1%201zm-23-3a1%201%200%20111-1%201%201%200%2001-1%201zm35%203a1%201%200%20111-1%201%201%200%2001-1%201zm5-2a1%201%200%20111-1%201%201%200%2001-1%201z%22%2F%3E%3C%2Fsvg%3E");
-}
-/*Chat_Inputs*/
-[dir] .im-chat-input .im-chat-input_open-keyboard .im_chat-input--keyboard-button .im_chat-input--keyboard-button-icon {
-	background: url("data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20height%3D%2217.8%22%20rx%3D%224%22%20stroke%3D%22%234c8c4c%22%20stroke-width%3D%221.8%22%20width%3D%2217.8%22%20x%3D%223.1%22%20y%3D%223.1%22%20fill%3D%22none%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M9%207a2%202%200%201%201%200%204%202%202%200%200%201%200-4zm6%200a2%202%200%201%201%200%204%202%202%200%200%201%200-4zm-6%206a2%202%200%201%201%200%204%202%202%200%200%201%200-4zm6%200a2%202%200%201%201%200%204%202%202%200%200%201%200-4z%22%20fill%3D%22%234c8c4c%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-/*Notify_Bell_2*/
-[dir] body.new_header_design .top_nav_btn#top_notify_btn .top_nav_btn_icon {
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20fill%3D%22%23ddd%22%20fill-rule%3D%22evenodd%22%20d%3D%22M8%2C18%20C6.64583333%2C18%205.5%2C17.3%205.5%2C16%20L10.5%2C16%20C10.5%2C17.3%209.35416667%2C18%208%2C18%20Z%20M13.9956933%2C11%20C13.9956933%2C12.5%2016%2C12.5%2016%2C13.5%20C16%2C14%2016%2C15%2013.8955984%2C15%20L1.98430985%2C15%20C-6.19060359e-13%2C15%20-1.62536651e-13%2C14%20-1.63424829e-13%2C13.5%20C-1.63369318e-13%2C12.5%201.98430985%2C12.5%202%2C11%20L2%2C8%20C2%2C4%204.09724901%2C1.5%207%2C1.1%20L7%2C1%20C7%2C0.4%207.5%2C5.74053187e-17%208%2C0%20C8.5%2C0%209%2C0.4%209%2C1%20L9%2C1.1%20C11.902751%2C1.5%2013.9956933%2C4%2013.9956933%2C8%20L13.9956933%2C11%20Z%22%20transform%3D%22translate(2%201)%22%2F%3E%3C%2Fsvg%3E");
-}
-/*Left_UI*/
-[dir] #side_bar .left_icon {
-	background: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2218%22%20height%3D%221045%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20id%3D%22a%22%20d%3D%22M0%200h18v1045H0z%22%2F%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%20%20%20%20%3Cmask%20id%3D%22b%22%20fill%3D%22%23fff%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cuse%20xlink%3Ahref%3D%22%23a%22%2F%3E%0A%20%20%20%20%20%20%20%20%3C%2Fmask%3E%0A%20%20%20%20%20%20%20%20%3Cg%20mask%3D%22url(%23b)%22%20fill%3D%22%234c8c4c%22%20fill-rule%3D%22nonzero%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M3.34314575%20908.656854c-3.12419433-3.124194-3.12419433-8.189514%200-11.313708%203.12419433-3.124195%208.18951415-3.124195%2011.31370845%200%203.1241944%203.124194%203.1241944%208.189514%200%2011.313708-3.1241943%203.124195-8.18951412%203.124195-11.31370845%200zm3.53553391-3.535534c1.41421356%201.414214%201.92503606%202.344536%201.92503606%202.344536.31386927.465139.80527777.475584%201.1203791.029206%200%200%201.90433228-1.666635-.92409482-4.495062-2.82842712-2.828427-4.49506166-.924095-4.49506166-.924095-.46357352.288318-.43330227.816712.02920587%201.120379%200%200%20.93032188.510823%202.34453545%201.925036zm3.72102664-1.968055c.3167775.452405%201.1236967.433954%201.8023045-.041212.6786078-.475167.9719292-1.227112.6551516-1.679517-.3167775-.452405-1.1236967-.433954-1.8023045.041212-.6786077.475167-.9719291%201.227112-.6551516%201.679517zm.8087715%202.271479c.1664955.35705.7356371.44404%201.2712132.194297.5355762-.249743.8347752-.741647.6682797-1.098698-.1664955-.357051-.7356371-.44404-1.2712132-.194297-.5355762.249743-.8347752.741647-.6682797%201.098698zm-4.85646959-4.85647c.35705078.166495.84895454-.132703%201.09869781-.66828.24974327-.535576.16275335-1.104717-.19429743-1.271213-.35705078-.166495-.84895455.132704-1.09869781.66828-.24974327.535576-.16275335%201.104717.19429743%201.271213zm2.29473037.832023c.45240518.316778%201.20435042.023457%201.67951672-.655151.4751663-.678608.4936178-1.485527.0412126-1.802305-.4524052-.316777-1.20435043-.023456-1.67951671.655152-.47516628.678608-.49361779%201.485527-.04121261%201.802304zM8.99262937%20867c3.42948403%200%206.47506643%202.179347%207.57841983%205.423131%201.110154%203.261905.0148198%206.854683-2.7255203%208.940236-.6850163.52129-1.448574.927284-2.269367%201.206542-.8397404.28543-1.70880616.43013-2.58317874.43013h-.00031448c-1.22576476-.000039-2.41186572-.278315-3.52540041-.827043-1.91655958-.943008-3.35078534-2.576496-4.03839605-4.599546-1.1100361-3.261945-.01450539-6.85492%202.72614927-8.940669.68462315-.521015%201.44798425-.926813%202.2688559-1.206149C7.25618826%20867.143521%208.12041885%20867%208.99262937%20867zm.77405343%201.763251c-3.2638316%202.48396-3.50079234%205.308581-3.49560342%206.115026l.0011793.186368.1766985.059044c.41377718.138253.81273448.208343%201.18578648.208343.33409579%200%20.65321446-.056253.94843264-.167264l.15566764-.058493.01242197-.165967c.08408411-1.13032.60997344-3.350353%203.18749159-5.518222l.3088194-.2598-.3638928-.174379c-.4985295-.238926-1.024694-.415467-1.5637915-.52467l-.1102253-.022407-.0918675.06494c-.11836242.083652-.23648901.170291-.351117.257481zm-6.91600679%203.652293l-.06777046.16121.12374792.123748c.40905997.408981%201.05563103%201.005511%201.81305632%201.524835l.35107771.240735.0545623-.42219c.16608479-1.286931.75577427-3.218153%202.6218598-5.110065l.63450289-.643348-.87960081.207007c-.22823392.053658-.44691551.116121-.64983379.185504-.68399419.232046-1.32097361.570506-1.89332737%201.006061-.92575076.704514-1.65479422%201.647325-2.10827451%202.726503zm-.23904418%204.487748l.08907649.05299c1.86875861%201.114203%203.63436776%201.679206%205.24776854%201.679206.04119689%200%20.0824724-.000275.12343343-.001061%201.38269033-.024844%202.35262551-.464094%202.92285661-.828184l.2768604-.176895-.2353884-.229256c-.4584726-.446365-.9867599-.846305-1.57023837-1.188656l-.11710453-.068714-.12335481.056607c-.49337995.226622-1.02595198.341486-1.58285691.341486-1.96557917%200-3.88595183-1.433518-4.8557298-2.288l-.38779326-.341683-.04390928.515001c-.06816356.800745.00860889%201.600586.2281553%202.377312l.02822459.099847zm10.13683327%203.609367l.1658882-.112977-.0669449-.189199c-.1731213-.489292-.403478-.96569-.6847018-1.415986l-.1438746-.230317-.2242637.153466c-.7540839.516691-2.03303511%201.1326-3.84337905%201.1326-1.12013876%200-2.31009211-.23928-3.53683962-.711157l-1.06085927-.408078.77731616.829245c.55037946.587174%201.19734362%201.066048%201.92292781%201.423337.92881694.457293%201.91773889.689144%202.93936676.689144.72975105%200%201.45470631-.120957%202.15469961-.359254.5611111-.190497%201.099619-.459888%201.6006644-.800824zm2.4421344-3.027028l.0404893-.101105-.0435555-.099887c-1.2780471-2.924665-3.217092-4.085765-4.2592397-4.517585l-.2197822-.091121-.1105791.210702c-.4539913.865252-.5992025%201.589068-.64106767%202.043924l-.01509504.16467.14265601.08373c2.0675494%201.213067%203.119328%202.840148%203.6376305%203.991499l.1725316.383469.266404-.325369c.4309556-.526243.7773555-1.11267%201.0296078-1.742927zm-.0066041-2.681729l.5227839.74921-.0491376-.912229c-.0335314-.61984-.1487097-1.222148-.3425081-1.79006-.3677451-1.081811-1.0127045-2.056306-1.8650241-2.818095l-.1609745-.143953-.1711558.131531c-.5676759.436027-1.0678958.899099-1.486744%201.376401l-.2276835.259642.3122394.14757c.9357355.442159%202.2970019%201.321563%203.4682043%202.999983zM9.92410215%20851.01354l-.92379693-.89343-.92461085.89343c-1.36087089%201.31528-3.56658866%201.31528-4.92745955%200-1.53097976-1.480762-1.53097976-3.875531%200-5.355436l5.15697828-4.986051c.38762006-.374772%201.00256418-.374772%201.39018424%200l5.15697826%204.986051c1.5301659%201.479905%201.5301659%203.875532%200%205.355436-1.3608709%201.31528-3.5674026%201.31528-4.92827345%200zM6.99999237%20855l1.99999976-4%201.99999977%204s-.99999989.5-1.99999977.5c-.99999988%200-1.99999976-.5-1.99999976-.5zM11.8177979%20818.099115c1.6989336-5.76-3.27044701-8-3.27044701-8-.33978671%202.88-2.03872024%203.48-3.82260044%205-2.97313368%202.52-2.71829365%205-2.71829365%205-.21236669%203.84%204.8844339%205.52%204.8844339%205.52-2.33603361-4%201.10430679-6%201.10430679-6-.12742001%205.16%204.20486051%206.48%204.20486051%206.48%207.0930475-3.64%202.0811936-11.24%202.0811936-11.24-.1698934%202.6-2.4634537%203.24-2.4634537%203.24zM3.46972561%20765c-.26403164%200-.48255645-.2052934-.49902629-.46881086l-.41295762-6.60732189c-.00626404-.10022472.03082317-.19831191.10183103-.26931977.1366835-.1366835.35829125-.1366835.49497475%200L6.5%20761l2.18695048-4.37390097c.0338673-.06773459.08879017-.12265746.15652476-.15652475.17289248-.08644624.38312804-.01636772.46957428.15652475L11.5%20761l3.3454525-3.34545252c.0710079-.07100786.1690951-.10809508.2693198-.10183103.1929232.0120577.3395437.17822758.327486.3711508l-.4129576%206.60732189C15.0128308%20764.7947066%2014.794306%20765%2014.5302744%20765H3.46972561zm.17124569%201h10.7180574c.2228797%200%20.3037012.0232064.3851827.0667832.0814815.0435767.1454287.1075239.1890054.1890054.0435768.0814815.0667832.162303.0667832.3851827v.7180574c0%20.2228797-.0232064.3037012-.0667832.3851827-.0435767.0814815-.1075239.1454287-.1890054.1890054-.0814815.0435768-.162303.0667832-.3851827.0667832H3.6409713c-.22287968%200-.30370124-.0232064-.38518273-.0667832-.08148148-.0435767-.14542862-.1075239-.18900539-.1890054C3.0232064%20767.6627299%203%20767.5819084%203%20767.3590287v-.7180574c0-.2228797.0232064-.3037012.06678318-.3851827.04357677-.0814815.10752391-.1454287.18900539-.1890054C3.33727006%20766.0232064%203.41809162%20766%203.6409713%20766zM16.6710289%20790.95792l.0480191.113795c.5299824.602009.7836924%201.371923.7809297%202.140426-.0041441.85081-.3204759%201.70303-.9826085%202.322441v1.759938c0%20.388955-.3103458.70548-.6906807.70548h-1.6143511c-.3812558%200-.6906807-.316525-.6906807-.70548V796H4.47788318v1.29452c0%20.388955-.30942496.70548-.69068073.70548H2.17285136c-.38125576%200-.69068073-.316525-.69068073-.70548%200%200-.01335316-1.805559-.02025997-1.811673-.62391493-.58696-.9651112-1.416604-.96188803-2.334669.00322318-.743106.24588234-1.485741.74639564-2.075523l.05116863-.117002C.46828724%20790.891209%200%20790.491009%200%20789.982728%200%20789.439729.62512952%20789%201.39542906%20789c.20334189%200%20.44627711.050412.6936548.145813l.12981288-.296831c.43420795-1.161691.99458025-2.303157%201.63461106-2.733971%202.21248061-1.486681%208.0809646-1.486681%2010.2934452%200%20.6395703.430343%201.2022449%201.570399%201.6341506%202.733971l.125895.298345c.2487296-.096382.4931572-.147327.6975723-.147327C17.3748705%20789%2018%20789.439729%2018%20789.982728c0%20.514658-.4801115.918506-1.3289711.975192zm-12.03366161-3.480102c-.34508322.253407-.78896042%201.273244-1.19480426%202.522182H14.6721461c-.4067715-1.249455-.8506487-2.269809-1.1957319-2.522182-1.7755088-1.303757-7.06261044-1.303757-8.83904691%200zM3.59544126%20792c-.77029953%200-1.39542905.439729-1.39542905.982728%200%20.542998.53444431.962648%201.47254039.981359.54535749.009958%202.01765864.113493%202.02742803-.084343C5.70750991%20792.72521%204.36668653%20792%203.59544126%20792zm10.80911744%200c-.7712452%200-2.1120686.72521-2.1045393%201.879744.0097694.197836%201.4820705.094301%202.027428.084343.9380961-.018711%201.4725404-.438361%201.4725404-.981359%200-.542999-.6251295-.982728-1.3954291-.982728zM2.96145695%20700h4.0770861c.33431953%200%20.45555187.03481.57777409.100175.12222222.065365.21814294.161286.2835081.283508C7.9651904%20700.505905%208%20700.627137%208%20700.961457v4.077086c0%20.33432-.0348096.455552-.10017476.577774s-.16128588.218143-.2835081.283508C7.49409492%20705.96519%207.37286258%20706%207.03854305%20706h-4.0770861c-.33431953%200-.45555187-.03481-.57777409-.100175-.12222222-.065365-.21814294-.161286-.2835081-.283508C2.0348096%20705.494095%202%20705.372863%202%20705.038543v-4.077086c0-.33432.0348096-.455552.10017476-.577774s.16128588-.218143.2835081-.283508C2.50590508%20700.03481%202.62713742%20700%202.96145695%20700zm0%208h4.0770861c.33431953%200%20.45555187.03481.57777409.100175.12222222.065365.21814294.161286.2835081.283508C7.9651904%20708.505905%208%20708.627137%208%20708.961457v4.077086c0%20.33432-.0348096.455552-.10017476.577774s-.16128588.218143-.2835081.283508C7.49409492%20713.96519%207.37286258%20714%207.03854305%20714h-4.0770861c-.33431953%200-.45555187-.03481-.57777409-.100175-.12222222-.065365-.21814294-.161286-.2835081-.283508C2.0348096%20713.494095%202%20713.372863%202%20713.038543v-4.077086c0-.33432.0348096-.455552.10017476-.577774s.16128588-.218143.2835081-.283508C2.50590508%20708.03481%202.62713742%20708%202.96145695%20708zm7.99999995%200h4.0770862c.3343195%200%20.4555518.03481.577774.100175.1222223.065365.218143.161286.2835081.283508.0653652.122222.1001748.243454.1001748.577774v4.077086c0%20.33432-.0348096.455552-.1001748.577774-.0653651.122222-.1612858.218143-.2835081.283508-.1222222.065365-.2434545.100175-.577774.100175h-4.0770862c-.3343195%200-.4555518-.03481-.577774-.100175-.1222223-.065365-.218143-.161286-.2835081-.283508C10.0348096%20713.494095%2010%20713.372863%2010%20713.038543v-4.077086c0-.33432.0348096-.455552.1001748-.577774.0653651-.122222.1612858-.218143.2835081-.283508.1222222-.065365.2434545-.100175.577774-.100175zm2.7183958-8.562788l2.8829353%202.882935c.2363996.2364.2975097.346738.3377137.479383.040204.132644.040204.268296%200%20.40094-.040204.132645-.1013141.242983-.3377137.479383l-2.8829353%202.882935c-.2363996.2364-.3467379.29751-.4793822.337714-.1326443.040204-.2682967.040204-.400941%200s-.2429826-.101314-.4793822-.337714l-2.88293526-2.882935c-.2363996-.2364-.2975097-.346738-.33771372-.479383-.04020401-.132644-.04020401-.268296%200-.40094.04020402-.132645.10131412-.242983.33771372-.479383l2.88293526-2.882935c.2363996-.2364.3467379-.29751.4793822-.337714.1326443-.040204.2682967-.040204.400941%200s.2429826.101314.4793822.337714zM8%20741.929111c-3.06569114-.438513-5.49059835-2.86342-5.92911113-5.929111H1c-.55228475%200-1-.447715-1-1s.44771525-1%201-1h1.07088887C2.50940165%20730.934309%204.93430886%20728.509402%208%20728.070889V727c0-.552285.44771525-1%201-1s1%20.447715%201%201v1.070889c3.0656911.438513%205.4905983%202.86342%205.9291111%205.929111H17c.5522847%200%201%20.447715%201%201s-.4477153%201-1%201h-1.0708889c-.4385128%203.065691-2.86342%205.490598-5.9291111%205.929111V743c0%20.552285-.44771525%201-1%201s-1-.447715-1-1v-1.070889zM9%20740c2.7614237%200%205-2.238576%205-5s-2.2385763-5-5-5c-2.76142375%200-5%202.238576-5%205s2.23857625%205%205%205zm0-3c-1.1045695%200-2-.895431-2-2%200-1.104569.8954305-2%202-2s2%20.895431%202%202c0%201.104569-.8954305%202-2%202zM10.7142183%20675.888889c0%201.981%202.0459196%203.027889%203.7987079%207C15.0709042%20684.152778%2016.5039907%20686%209%20686c-7.50399075%200-6.07090422-1.847222-5.51292615-3.111111%201.75278824-3.972111%203.79870782-5.019%203.79870782-7v-2.333333h-.42855458c-.23656213%200-.42855459-.174223-.42855459-.388889v-.777778c0-.214667.19199246-.388889.42855459-.388889h4.28554581c.2365621%200%20.4285546.174222.4285546.388889v.777778c0%20.214666-.1919925.388889-.4285546.388889h-.4285546v2.333333zm1.735443%208.069203c.1783937-.04876.2478885-.235997.1848417-.408281-.1576169-.435586-.4563727-1.187786-1.0108977-2.029053-.4556562-.691737-.1339743.323114-1.3067875.323114-1.17281325%200-2.58205184-2.376871-3.94042315-.323114-.55595788.840617-.85328071%201.593467-1.01089763%202.029053-.06304677.172284.00644796.360172.18484166.408281C6.05327996%20684.094619%207.05414743%20684.25%209%20684.25c1.9458526%200%202.94672-.155381%203.4496613-.291908zM14.7651429%20625.421307c-.7225715%201.161648-3.03%202.012216-5.7651429%202.012216-2.73514286%200-5.04257143-.850568-5.766-2.012216-.15257143-.247159-.234-.115057-.234.005966v1.70625C3%20628.786932%205.68628571%20630.5%209%20630.5c3.3137143%200%206-1.713068%206-3.365625v-1.70625c0-.121875-.0822857-.253977-.2348571-.006818zm.0094285-4.360227c-.7114285%201.026988-3.0274285%201.78125-5.7745714%201.78125-2.74714286%200-5.064-.754262-5.77542857-1.78125C3.078%20620.849716%203%20620.964773%203%20621.059375v2.008807c0%201.501704%202.68628571%202.717898%206%202.717898%203.3137143%200%206-1.217046%206-2.717898v-2.008807c0-.094602-.0788571-.209659-.2254286.001705zM9%20615.5c-3.31371429%200-6%201.005682-6%202.244034v1.073864c0%201.313352%202.68628571%202.378693%206%202.378693%203.3137143%200%206-1.065341%206-2.378693v-1.073864C15%20616.505682%2012.3137143%20615.5%209%20615.5z%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M14.7651429%20624.921307c-.7225715%201.161648-3.03%202.012216-5.7651429%202.012216-2.73514286%200-5.04257143-.850568-5.766-2.012216-.15257143-.247159-.234-.115057-.234.005966v1.70625C3%20628.286932%205.68628571%20630%209%20630c3.3137143%200%206-1.713068%206-3.365625v-1.70625c0-.121875-.0822857-.253977-.2348571-.006818zm.0094285-4.360227c-.7114285%201.026988-3.0274285%201.78125-5.7745714%201.78125-2.74714286%200-5.064-.754262-5.77542857-1.78125C3.078%20620.349716%203%20620.464773%203%20620.559375v2.008807c0%201.501704%202.68628571%202.717898%206%202.717898%203.3137143%200%206-1.217046%206-2.717898v-2.008807c0-.094602-.0788571-.209659-.2254286.001705zM9%20615c-3.31371429%200-6%201.005682-6%202.244034v1.073864c0%201.313352%202.68628571%202.378693%206%202.378693%203.3137143%200%206-1.065341%206-2.378693v-1.073864C15%20616.005682%2012.3137143%20615%209%20615zM12.9371701%20654.002258c.1074811.531128.206315.76532.466883.991883L5.03026389%20655c.05160041-1.108983%203.14833772-3%203.14833772-5.5-.52472295.5-2.76294717%201.285628-3.14833772%201.5-.06826304.04026-1.37206726-.706153-1.57416886-1-.44612852-.650436-.46646006-.746281-.45355996-.875427.0252627-.254632.32111869-.378538.48129495-.465332.00806257-.004183.85502645-.466534%201.59946983-1.451599.31443999-.7571.56466377-1.397048%201.83209878-2.023432.48751635-.240515.95084501-.424039%201.28517266-.544819-.04850158-.210334-.2864851-1.143496-.54669263-1.639391%200%200%20.88145622.136433%201.57352833.534546.55544928.319521.93401641.909582%201.05008641.965454.317665.153198.8018519.011257%202.0988918%201C15%20647.5%2013.5112876%20650.47804%2013.5%20650.5l-.5628299%203.502258zM3.6409713%20655h10.7180574c.2228797%200%20.3037012.023206.3851827.066783.0814815.043577.1454287.107524.1890054.189006.0435768.081481.0667832.162303.0667832.385182v1.718058c0%20.222879-.0232064.303701-.0667832.385182-.0435767.081482-.1075239.145429-.1890054.189006-.0814815.043577-.162303.066783-.3851827.066783H3.6409713c-.22287968%200-.30370124-.023206-.38518273-.066783-.08148148-.043577-.14542862-.107524-.18900539-.189006C3.0232064%20657.66273%203%20657.581908%203%20657.359029v-1.718058c0-.222879.0232064-.303701.06678318-.385182.04357677-.081482.10752391-.145429.18900539-.189006.08148149-.043577.16230305-.066783.38518273-.066783zM14.83824%20598.079066C14.4605335%20599.548962%2013.2008894%20602%209%20602c-4.20088941%200-5.46053351-2.451038-5.83824002-3.920934l-1.02341576.089538%201.73092217-3.162896%202.25385662%202.814273-.93084685.081438c.28818399.756608%201.00829889%201.75627%202.80772384%202.027917v-6.100042C6.83480763%20593.417458%206%20592.306219%206%20591c0-1.656854%201.34314575-3%203-3%201.6568542%200%203%201.343146%203%203%200%201.306219-.8348076%202.417458-2%202.829294v6.100042c1.799425-.271647%202.5195399-1.271309%202.8077238-2.027917l-.9308468-.081438%202.2538566-2.814273%201.7309222%203.162896-1.0234158-.089538zM9%20592c.55228475%200%201-.447715%201-1s-.44771525-1-1-1-1%20.447715-1%201%20.44771525%201%201%201zM1.25284123%20561.8042858c-.04792191-.54774995.35637394-1.03055912.90501873-1.07855932l8.97456364-.78517258c.5477499-.0479219%201.0305591.35637394%201.0785593.90501873l.7851726%208.97456367c.0479219.5477499-.356374%201.0305591-.9050187%201.0785593l-8.97456367.7851726c-.54774996.0479219-1.03055913-.356374-1.07855933-.9050188l-.78517257-8.9745636zM4%20564c.55228475%200%201-.44771525%201-1s-.44771525-1-1-1-1%20.44771525-1%201%20.44771525%201%201%201zm3%203c.55228475%200%201-.44771525%201-1s-.44771525-1-1-1-1%20.44771525-1%201%20.44771525%201%201%201zm3%202c.55228475%200%201-.44771525%201-1s-.44771525-1-1-1-1%20.44771525-1%201%20.44771525%201%201%201zm3.9274295-4.18030647l2.1975875.19226399c.5477499.04792191.9530189.52991453.9050187%201.07855932l-.7851726%208.97456366c-.0479219.5477499-.5299145.9530189-1.0785593.9050187l-8.9745636-.7851726c-.54774996-.0479219-.95301893-.5299145-.90501873-1.0785593l.0864965-.9886595%208.21791113-.7189741c.5486448-.0480002.9529407-.5308093.9050188-1.0785593l-.5687184-6.50048087zM1%20542.515023c0-.270884.21505737-.490479.49047852-.490479h3.01904296c.27088381%200%20.49047852.215058.49047852.490479v3.019043c0%20.270884-.21505737.490478-.49047852.490478H1.49047852C1.21959471%20546.024544%201%20545.809487%201%20545.534066v-3.019043zm5%200c0-.270884.21505737-.490479.49047852-.490479h3.01904296c.27088381%200%20.49047852.215058.49047852.490479v3.019043c0%20.270884-.21505737.490478-.49047852.490478H6.49047852C6.21959471%20546.024544%206%20545.809487%206%20545.534066v-3.019043zm5%200c0-.270884.2150574-.490479.4904785-.490479h3.019043c.2708838%200%20.4904785.215058.4904785.490479v3.019043c0%20.270884-.2150574.490478-.4904785.490478h-3.019043c-.2708838%200-.4904785-.215057-.4904785-.490478v-3.019043zm-5-5c0-.270884.21505737-.490479.49047852-.490479h3.01904296c.27088381%200%20.49047852.215058.49047852.490479v3.019043c0%20.270884-.21505737.490478-.49047852.490478H6.49047852C6.21959471%20541.024544%206%20540.809487%206%20540.534066v-3.019043zm5.5468329-4.141708c-.1915438-.191544-.1947522-.498889%200-.693641l2.1347857-2.134786c.1915438-.191544.4988893-.194752.6936414%200l2.1347858%202.134786c.1915437.191543.1947521.498889%200%20.693641l-2.1347858%202.134786c-.1915438.191544-.4988892.194752-.6936414%200l-2.1347857-2.134786zM1%20537.515023c0-.270884.21505737-.490479.49047852-.490479h3.01904296c.27088381%200%20.49047852.215058.49047852.490479v3.019043c0%20.270884-.21505737.490478-.49047852.490478H1.49047852C1.21959471%20541.024544%201%20540.809487%201%20540.534066v-3.019043zm0-5c0-.270884.21505737-.490479.49047852-.490479h3.01904296c.27088381%200%20.49047852.215058.49047852.490479v3.019043c0%20.270884-.21505737.490478-.49047852.490478H1.49047852C1.21959471%20536.024544%201%20535.809487%201%20535.534066v-3.019043zm5.04522705.707787c-.1354419-.234593-.05899411-.532296.1795276-.670006l2.6145679-1.509522c.23459226-.135442.53229554-.058994.67000612.179528l1.50952153%202.614568c.1354419.234592.0589941.532295-.1795276.670006l-2.61456795%201.509521c-.23459226.135442-.53229554.058994-.67000611-.179527l-1.50952149-2.614568zm6.40954585%202.900024c.135442-.234592.4314845-.317238.6700062-.179528l2.6145679%201.509522c.2345922.135442.3172381.431484.1795276.670006l-1.5095215%202.614568c-.1354419.234592-.4314844.317238-.6700061.179528l-2.6145679-1.509522c-.2345923-.135442-.3172382-.431484-.1795276-.670006l1.5095214-2.614568zM5%20392.000488v3.999024l1.5-2%201.5%202v-3.999024h5.5044548c.8259668%200%201.4955452.675249%201.4955452%201.498246v10.501754H4.50034732c-.27134675%200-.50034732.223858-.50034732.5%200%20.268067.22401312.5.50034732.5H15v.501733c0%20.275185-.2290006.498267-.5003473.498267H4.49554521C3.6695784%20406.000488%203%20405.325239%203%20404.502243v-11.003509c0-.827458.67955446-1.498246%201.49554521-1.498246H5zM8.96145695%20420h1.07708615c.3343195%200%20.4555518.03481.577774.100175.1222223.065365.218143.161286.2835081.283508.0653652.122222.1001748.243454.1001748.577774v11.077086c0%20.33432-.0348096.455552-.1001748.577774-.0653651.122222-.1612858.218143-.2835081.283508-.1222222.065365-.2434545.100175-.577774.100175H8.96145695c-.33431953%200-.45555187-.03481-.57777409-.100175-.12222222-.065365-.21814294-.161286-.2835081-.283508C8.0348096%20432.494095%208%20432.372863%208%20432.038543v-11.077086c0-.33432.0348096-.455552.10017476-.577774s.16128588-.218143.2835081-.283508C8.50590508%20420.03481%208.62713742%20420%208.96145695%20420zm-5%206.98435h1.0770861c.33431953%200%20.45555187.03481.57777409.100175.12222222.065365.21814294.161286.2835081.283508C5.9651904%20427.490255%206%20427.611488%206%20427.945807v4.077086c0%20.33432-.0348096.455552-.10017476.577774s-.16128588.218143-.2835081.283508c-.12222222.065365-.24345456.100175-.57777409.100175h-1.0770861c-.33431953%200-.45555187-.03481-.57777409-.100175-.12222222-.065365-.21814294-.161286-.2835081-.283508C3.0348096%20432.478445%203%20432.357213%203%20432.022893v-4.077086c0-.334319.0348096-.455552.10017476-.577774s.16128588-.218143.2835081-.283508c.12222222-.065365.24345456-.100175.57777409-.100175zM13.9614569%20423h1.0770862c.3343195%200%20.4555518.03481.577774.100175.1222223.065365.218143.161286.2835081.283508.0653652.122222.1001748.243454.1001748.577774v8.077086c0%20.33432-.0348096.455552-.1001748.577774-.0653651.122222-.1612858.218143-.2835081.283508-.1222222.065365-.2434545.100175-.577774.100175h-1.0770862c-.3343195%200-.4555518-.03481-.577774-.100175-.1222223-.065365-.218143-.161286-.2835081-.283508C13.0348096%20432.494095%2013%20432.372863%2013%20432.038543v-8.077086c0-.33432.0348096-.455552.1001748-.577774.0653651-.122222.1612858-.218143.2835081-.283508.1222222-.065365.2434545-.100175.577774-.100175zM10.8419872%20513.044184c.4118834%203.51457-.2735035%203.258415-4.03743348%204.862167-.71876085.306272-.96540245-.190923-.76353078-.736644.20105768-.544926.64550097-1.74933.64550097-1.74933l-2.10825661-2.106515s-1.20309007.444691-1.74846919.64516c-.54537912.20206-1.04273232-.045344-.73585482-.762896%201.60357743-3.764361%201.34798184-4.449296%204.86282818-4.038017%200%200%204.05127153-5.74598%208.68862203-5.108775.1025638.013524.1701257.047731.2140816.091484.043142.043753.0773299.112167.0911679.213197.637361%204.637833-5.1086558%208.690169-5.1086558%208.690169zm.8213247-4.706247c.4859572.486058%201.2755359.486058%201.7631212%200%20.4867712-.488444.4867712-1.277592%200-1.763649-.4875853-.486058-1.27635-.486058-1.7631212%200-.4867712.487648-.4867712%201.276%200%201.763649zM8%20455.000977v1h3v-1h5v5.009222c0%20.547191-.4474894.990778-.9985023.990778H3.99850233C3.44704472%20461.000977%203%20460.550001%203%20460.010199v-5.009222h5zm-6-3.990632c0-.557459.44892021-1.009368%201.00748397-1.009368H15.992516c.5564181%200%201.007484.443353%201.007484%201.009368v2.990632H2v-2.990632zM7%20450H5.5l1-2h6l1%202H12l-.5-1h-4l-.5%201zM9.61250802%20307.724397l1.55804178%204.386363h3.8891124c.3589851%200%20.65.291015.65.65%200%20.203909-.0956876.396001-.2584489.518833l-3.2073249%202.420493%201.2017619%204.452355c.093548.346582-.1115766.703378-.4581585.796926-.195015.052638-.4034183.011621-.5639414-.110992L9%20318.223357l-3.42285182%202.61497c-.28526332.217934-.69318517.163352-.91111894-.121911-.12262072-.160504-.16365866-.36889-.11105024-.563902l1.20113256-4.452428-3.20732489-2.420493c-.28654357-.216248-.34352961-.623841-.12728189-.910384.12283217-.162761.31492375-.258449.51883303-.258449h3.88911244l1.55804174-4.386363c.12015708-.338279.49179281-.515101.83007165-.394944.18438244.065492.3294515.210562.39494438.394944zM4.5%20258c.8%200%201.5.7%201.5%201.5s-.7%201.5-1.5%201.5-1.5-.7-1.5-1.5.7-1.5%201.5-1.5zm5%200c.8%200%201.5.7%201.5%201.5s-.7%201.5-1.5%201.5-1.5-.7-1.5-1.5.7-1.5%201.5-1.5zm5%200c.8%200%201.5.7%201.5%201.5s-.7%201.5-1.5%201.5-1.5-.7-1.5-1.5.7-1.5%201.5-1.5zM14.9595514%20346.479776L12%20345v-6l2.9595514-1.479776v-.010574c0-.281472.2206524-.50965.4958467-.50965h.0487552c.2738486%200%20.4958467.227653.4958467.50965v8.9807c0%20.281472-.2206524.50965-.4958467.50965h-.0487552c-.2738485%200-.4958467-.227653-.4958467-.50965v-.010574zM8.16623492%20345l.59956759%203.778868c.08211273.517528-.27086121%201.003633-.78838934%201.085745-.00621676.000987-.01244318.001911-.01867833.002774-.53402898.073867-1.03003984-.290166-1.11969938-.821771L6.15670995%20345H4.99686968C3.34174426%20345%202%20343.653483%202%20342c0-1.656854%201.34739093-3%202.99686968-3H11v6H8.16623492zM10%20284.502301V280l5%205h-4.5023012C10.2148438%20285%2010%20284.777173%2010%20284.502301zM4.2819426%20280H9v4.718057c0%20.44576.04641281.607403.13356635.770366.08715355.162963.21504784.290857.3780108.378011.16296296.087153.32460608.133566.77036545.133566H15v6.718057c0%20.44576-.0464128.607403-.1335664.770366-.0871535.162963-.2150478.290857-.3780107.378011-.162963.087153-.3246061.133566-.7703655.133566H4.2819426c-.44575937%200-.60740249-.046413-.77036545-.133566-.16296296-.087154-.29085725-.215048-.3780108-.378011C3.04641281%20293.32546%203%20293.163817%203%20292.718057v-11.436114c0-.44576.04641281-.607403.13356635-.770366.08715355-.162963.21504784-.290857.3780108-.378011.16296296-.087153.32460608-.133566.77036545-.133566zM15.4974334%20142.07563c.8527902%200%201.5989817.764706%201.4923829%201.638656v7.647059c0%20.873949-.7461914%201.638655-1.5989816%201.638655H2.59898163C1.74619143%20153%201%20152.235294%201%20151.361345v-7.428572c0-.873949.74619143-1.857143%201.59898163-1.857143h1.38578408c.31979632%200%20.53299387-.218487.63959265-.436975l.53299387-1.20168c.10659878-.218488.4263951-.436975.63959265-.436975h6.50252532c.3197963%200%20.5329938.218487.6395926.436975l.5329939%201.20168c.1065988.218488.4263951.436975.6395926.436975h1.3857841zM9%20151c2.1714286%200%204-1.828571%204-4s-1.8285714-4-4-4c-2.17142857%200-4%201.828571-4%204s1.82857143%204%204%204zm0-6.5c1.4130435%200%202.5%201.086957%202.5%202.5s-1.0869565%202.5-2.5%202.5c-1.41304348%200-2.5-1.086957-2.5-2.5s1.08695652-2.5%202.5-2.5zM13.0000003%20176.822313l-1e-7-5.822313-6.00000013%202v7.5s-.02790912-.006998-.07712396-.020993c.13156025.916545-.60227365%201.920746-1.77303785%202.346869-1.29744476.472231-2.64017405.055693-2.99906981-.930365-.35889577-.986058.40194853-2.168235%201.69939329-2.640467.39135719-.142442.78683459-.20402%201.15818869-.193495-.00167862-.020301-.00253569-.040818-.00253569-.061549v-9.043823L15.0000002%20167v11.5c0%20.011614-.0298575.007042-.0823026-.010114-.0287355.812672-.6742896%201.659959-1.6753085%202.084866-1.2709519.539487-2.633641.193792-3.0436512-.772131-.41001023-.965924.287921-2.1863%201.558873-2.725787.4165313-.176807.842916-.258538%201.2423894-.254521zM12%20210H6v-2H4v2h-.99315453C2.45078007%20210%202%20209.550051%202%20208.993155v-11.98631C2%20196.45078%202.44994876%20196%203.00684547%20196H4v2h2v-2h6v2h2v-2h.9931545C15.5492199%20196%2016%20196.449949%2016%20197.006845v11.98631C16%20209.54922%2015.5500512%20210%2014.9931545%20210H14v-2h-2v2zm-6-8v-2H4v2h2zm8%200v-2h-2v2h2zm-8%204v-2H4v2h2zm8%200v-2h-2v2h2zM16.7700878%20232.254457c.0995654.403513.9956538%204.539525-1.5930461%204.741282-1.0952191.100878-2.2900037-1.614054-3.1860921-2.521959-.796523-1.008783-1.6926114-1.513175-3.08652675-1.513175-1.39391531%200-2.19043835.504392-3.08652676%201.513175-.89608841.907905-2.09087296%202.622837-3.08652675%202.521959-2.48913449-.100879-1.59304607-4.337769-1.49348069-4.741282C1.63615016%20230.035133%203.03006547%20226%205.81789609%20226c0%200%20.89608841.100878%201.59304607.504392%201.19478455.504391%201.79217682.504391%203.08652674%200C11.2939919%20226.100878%2012.090515%20226%2012.090515%20226c2.887396%200%204.1817459%203.934255%204.6795728%206.254457zM11%20230.5c0%20.268066.2238576.5.5.5.2680664%200%20.5-.223858.5-.5%200-.268066-.2238576-.5-.5-.5-.2680664%200-.5.223858-.5.5zm2%200c0%20.268066.2238576.5.5.5.2680664%200%20.5-.223858.5-.5%200-.268066-.2238576-.5-.5-.5-.2680664%200-.5.223858-.5.5zm-7-.5v-.5c0-.276142-.22385763-.5-.5-.5-.27614237%200-.5.223858-.5.5v.5h-.5c-.27614237%200-.5.223858-.5.5s.22385763.5.5.5H5v.5c0%20.276142.22385763.5.5.5.27614237%200%20.5-.223858.5-.5v-.5h.5c.27614237%200%20.5-.223858.5-.5s-.22385763-.5-.5-.5H6zM9%2092c5.4%200%206%202.7%206%204.1%200%20.7-.24.9-1.68.9H4.8c-1.44%200-1.8-.2-1.8-.9%200-1.5.6-4.1%206-4.1zm0-1c-1.65685425%200-3-1.1666667-3-3.5S7.34314575%2084%209%2084c1.6568542%200%203%201.1666667%203%203.5S10.6568542%2091%209%2091zM1%20123.1c0-1.5%200-4.1%205-4.1s5%202.7%205%204.1c0%20.7-.2.9-1.4.9H2.5c-1.2%200-1.5-.2-1.5-.9zm11.5888378.9c.0076614-.087343.0111607-.181103.0111607-.281667%200-1.366528-.0360801-3.335002-1.4736169-4.689226C11.3991584%20119.009997%2011.6899671%20119%2012%20119c4.5%200%205%202.7%205%204.1%200%20.7-.2.9-1.4.9h-3.0111622zM6%20118c-1.1045695%200-2-.833333-2-2.5s.8954305-2.5%202-2.5%202%20.833333%202%202.5-.8954305%202.5-2%202.5zm6%200c-1.1045695%200-2-.833333-2-2.5s.8954305-2.5%202-2.5%202%20.833333%202%202.5-.8954305%202.5-2%202.5zM13.2276469%2030.3559519C15.4383532%2031.0930238%2017%2032.8945374%2017%2035.0000031c0%201.7856435-1.1232489%203.3526628-2.8130558%204.2371485.085624.4846394.3884255%201.1327788.826289%201.7789863-1.5830134%200-2.4263434-.4200033-2.8895897-1.1036649-.3639838.0574652-.7396.0875331-1.1236435.0875331-.3188002%200-.6317933-.0207195-.9371458-.0606309C12.6570816%2038.9412165%2014.5%2036.7046958%2014.5%2034c0-1.367561-.4711538-2.6154301-1.2723531-3.6440481zM5.87559716%2038.912347c-.46259633.6734773-1.30776189%201.0876591-2.8955938%201.0876591.44584613-.6429487.75166072-1.2878546.83075488-1.7640638C2.12223085%2037.3512391%201%2035.784831%201%2033.9999969c0-2.7614254%202.6862915-5.000003%206-5.000003s6%202.2385776%206%205.000003C13%2036.7614224%2010.3137085%2039%207%2039c-.38431053%200-.76018205-.0301098-1.12440284-.087653zM9%2070c-1.1%200-2-.9-2-2h4c0%201.1-.9%202-2%202zm4.8461546-6s1.163079.8000031%201.7015406%201.6000004C16.5061561%2066.8999939%2015.8600039%2067%2014.3738447%2067H3.63059629c-1.49574637%200-2.13678052-.1-1.17522929-1.4.53419513-.8%201.69847929-1.6%201.69847929-1.6v-3c0-2.6%201.18617441-4.5%203.66154035-5%200%200%200-1%201.18461382-1%201.18461384%200%201.18461384%201%201.18461384%201%202.2067821.5%203.6615403%202.4%203.6615403%205v3zM9.65018866.29787234c-.40173693-.39716312-1.00434233-.39716312-1.30564503%200L1.21371306%207.24822695c-.40173693.39716312-.20086847.69503546.3013027.69503546L3%208v5c0%201%200%201%201%201h2.50461102C6.7782068%2014%207%2013.7721195%207%2013.5089948V9.99791312C7%208.89449617%207.88772964%208%209%208c1.1045695%200%202%20.89826062%202%201.99791312v3.51108168C11%2013.7801695%2011.2157526%2014%2011.495389%2014H14c1%200%201%200%201-1V8l1.5801508-.05673759c.4017369-.09929078.6026054-.39716312.2008684-.69503546L9.65018866.29787234zM5.00247329%20937H1.99117881C1.44956458%20937%201%20936.554345%201%20936.004602V927h2v6.496577c0%20.27052.22319652.503423.49852337.503423H4v-9.993155C4%20923.45078%204.45576096%20923%205.00247329%20923h9.99505341C15.5511774%20923%2016%20923.449949%2016%20924.006845v11.49491C16%20936.329213%2015.3204455%20937%2014.5044548%20937H5.00247329zM7%20926.490479v3.019042c0%20.275422.21983051.490479.49100518.490479h5.01798962C12.7721195%20930%2013%20929.780405%2013%20929.509521v-3.019042c0-.275422-.2198305-.490479-.4910052-.490479H7.49100518C7.22788048%20926%207%20926.219595%207%20926.490479zM7%20931.5c0%20.268066.21983051.5.49100518.5h5.01798962C12.7721195%20932%2013%20931.776142%2013%20931.5c0-.268066-.2198305-.5-.4910052-.5H7.49100518C7.22788048%20931%207%20931.223858%207%20931.5zm0%202c0%20.268066.21959471.5.49047852.5h3.01904298C10.7849426%20934%2011%20933.776142%2011%20933.5c0-.268066-.2195947-.5-.4904785-.5H7.49047852C7.21505737%20933%207%20933.223858%207%20933.5zM5%20953c0-2.209139%201.790861-4%204-4s4%201.790861%204%204h.7180574c.4457594%200%20.6074025.04641281.7703655.13356635.1629629.08715355.2908572.21504784.3780107.3780108.0871536.16296296.1335664.32460608.1335664.77036545v8.4361148c0%20.4457594-.0464128.6074025-.1335664.7703655-.0871535.1629629-.2150478.2908572-.3780107.3780107-.162963.0871536-.3246061.1335664-.7703655.1335664H4.2819426c-.44575937%200-.60740249-.0464128-.77036545-.1335664-.16296297-.0871535-.29085725-.2150478-.3780108-.3780107C3.04641281%20963.3254599%203%20963.1638168%203%20962.7180574v-8.4361148c0-.44575937.0464128-.60740249.13356635-.77036545s.21504783-.29085725.3780108-.3780108C3.6745401%20953.04641281%203.83618323%20953%204.2819426%20953H5zm1.25%200h5.5c0-1.51878306-1.23121694-2.75-2.75-2.75s-2.75%201.23121694-2.75%202.75zM7.91448459%20973.63597946C8.243947%20973.54532649%208.60578547%20973.5%209%20973.5c.39421453%200%20.756053.04532649%201.08551541.13597946L10.9%20972.55c.2485281-.33137085.7186292-.39852814%201.05-.15.3313708.24852814.3985281.71862915.15%201.05l-.7072098.94294637c.5731737.5832726.9422437%201.45229048%201.1072098%202.60705363h-7c.16496616-1.15476314.53403609-2.02378102%201.10720978-2.60705363L5.9%20973.45c-.24852814-.33137085-.18137085-.80147186.15-1.05s.80147186-.18137085%201.05.15l.81448459%201.08597946zm-3.60229728%205.33742426C4.35969993%20978.63665834%204.42230416%20978.31078336%204.5%20978h9c.0776941.31077637.1402973.63664367.1878095.97338098l.5356572-.35710482c.0574965-.03833102.0965631-.0987508.1079234-.16691269l.4287771-2.57266271c.0680963-.40857774.454517-.68459249.8630947-.6164962.4085778.06809629.6845925.45451694.6164962.86309468l-.4287771%202.57266258c-.0795222.47713405-.3529882.90007256-.7554639%201.16838975l-1.2557259.83715056c-.0048915.86166345-.0957328%201.74576027-.2725238%202.59491857l1.6815745%201.4013121c.3070809.2559005.5173004.6092172.5956938%201.0011842l.430774%202.1538701c.0812339.4061698-.1821786.8012886-.5883484.8825226-.4061698.0812339-.8012887-.1821786-.8825226-.5883484l-.430774-2.1538702c-.0111991-.0559952-.0412304-.1064689-.0850991-.1430262l-1.1689618-.9741348C12.3201723%20986.9388652%2010.96030438%20988.5%209%20988.5c-1.96032979%200-3.32020757-1.5611752-4.07963333-3.6241501l-1.16905806.974215c-.04386869.0365573-.07390003.087031-.08509908.1430263l-.43077402%202.1538701c-.08123397.4061698-.4763528.6695823-.88252261.5883484-.40616982-.081234-.66958237-.4763528-.5883484-.8825226l.43077401-2.1538701c.07839341-.391967.28861291-.7452836.59569365-1.0011841l1.68168185-1.4014016c-.17677708-.8491227-.2676121-1.73317886-.27250508-2.59480419l-1.25576326-.83717551c-.40247573-.26831716-.67594166-.69125562-.75546402-1.16838978l-.4287771-2.57266258c-.06809628-.40857774.20791847-.79499839.61649621-.86309468.40857774-.06809629.79499839.20791846.86309468.6164962l.4287771%202.57266258c.01136034.06816202.0504269.1285818.10792343.16691282l.53569134.35712756zM3.34314575%201014.65685c-3.12419433-3.12419-3.12419433-8.18951%200-11.3137%203.12419433-3.1242%208.18951415-3.1242%2011.31370845%200%203.1241944%203.12419%203.1241944%208.18951%200%2011.3137-3.1241943%203.1242-8.18951412%203.1242-11.31370845%200zm7.42714775-3.89162c-.000844.00085-.0016862.0017-.0025265.00254-.97631078.97631-2.55922322.97631-3.53553395%200-.97631073-.97631-.97631073-2.55923%200-3.53554.97631073-.97631%202.55922317-.97631%203.53553395%200%20.0013199.00132.0026443.00265.0039732.004l-.0000163.00001c.2759811.27861.7051161.3361%201.044701.13997.3230058-.18656.4336168-.59965.2470566-.92266-.019161-.03317-.0411099-.06465-.0656092-.09411-.0606228-.07291-.1171102-.13553-.1694452-.18787-1.5620971-1.56209-4.09475706-1.56209-5.65685422%200-1.56209717%201.5621-1.56209717%204.09476%200%205.65686%201.56209716%201.56209%204.09475712%201.56209%205.65685422%200%20.0514726-.05148.1069946-.11293.1665658-.18436l.0000272.00002c.2389566-.28654.2003802-.71255-.0861627-.9515-.0294615-.02457-.0609622-.04659-.0941605-.06581-.3391791-.19638-.7681089-.13952-1.0444062.13845zM9%201045c-4.418278%200-8-3.58172-8-8s3.581722-8%208-8%208%203.58172%208%208-3.581722%208-8%208zm.5-5c.27614237%200%20.5-.22386.5-.5s-.22385763-.5-.5-.5H8v-1h1.5c1.75%200%203-1%203-2.5s-1.26875-2.4875-3-2.4875h-2c-.27614237%200-.5.22386-.5.5V1037l-.50003906-.00625c-.00205719-.00003-.00411453-.00004-.00617188-.00004-.27271217%200-.49378906.22108-.49378906.49379%200%20.27715.22283503.50279.49996094.50625L7%201038v1.0125l-.50003906-.00625c-.00205719-.00003-.00411453-.00004-.00617188-.00004-.27271217%200-.49378906.22108-.49378906.49379%200%20.27715.22283503.50279.49996094.50625L7%201040.0125v.48746c0%20.00206.00001286.00412.00003858.00617.0034089.27272.22724925.49103.49996142.48762.27714757-.00346.5-.22912.5-.50629V1040h1.5zm-1.5-6h1.5c1.5%200%202%20.75%202%201.49879%200%20.74879-.5%201.49879-2%201.49879H8V1034zM14.6567251%20365.343094c3.1242276%203.124126%203.1242276%208.189061.0008333%2011.313187-3.125061%203.124959-8.19015992%203.124959-11.31522095%200-3.12339433-3.123293-3.12339433-8.188227.0016667-11.313187%203.12339433-3.124125%208.18849325-3.124125%2011.31272095%200zm-8.13134675%208.131416c1.36717114%201.36732%203.58264265%201.36732%204.94981385%200%201.3656495-1.366559%201.3671711-3.582271%200-4.949591-1.3671712-1.366559-3.58416432-1.366559-4.94981385%200-1.36717113%201.366559-1.36717113%203.582271%200%204.949591zm6.93048995-.075687l1.487529.799156c1.072521-1.989974%201.072521-4.405776-.0016667-6.39825l-1.4858623.79999c.8075157%201.49998.8066824%203.299957%200%204.799104zm-1.2566912-8.341558c-1.9925389-1.072486-4.40675275-1.072486-6.39845831.000833l.80084897%201.485814c1.49752925-.805823%203.2975644-.805823%204.79676034%200l.800849-1.486647zm-9.14101187%202.742464c-1.07335429%201.992474-1.07418764%204.407443-.00083335%206.39825l1.4866957-.800823c-.80584907-1.499147-.80584907-3.29829.00083335-4.796604l-1.4866957-.800823zm2.74088686%209.140714c1.99253891%201.074153%204.40758611%201.074153%206.40095831.001667l-.800849-1.487481c-1.49919589.80749-3.30006439.80749-4.79926034%200l-.80084897%201.485814zM9.00041664%20475.000122c4.41060366%200%207.99958336%203.589167%207.99958336%208s-3.5889797%208-7.99958336%208c-4.41227019%200-8.00041664-3.589167-8.00041664-8s3.58814645-8%208.00041664-8zm6.82297796%208c0-3.004167-1.9532316-5.56-4.6564241-6.468333-.1674913.203333-.2916515.399166-.2799854.53.1824904%201.825833%201.4274256.455833%201.6682464.724166.8607885.953334-1.6157492%201.284167-.7549607%203.0075.4149784.828334.8941201%201.059167%201.5924171%201.069167.6991302.011667.9566168%201.204167%201.011614%201.699167.0583303.495833-.0074997%201.769166-.2599865%202.319166-.249987.546667.0158325%201.074167.2658195%201.269167.8832873-1.15%201.4132597-2.589167%201.4132597-4.15zm-7.76042913-6.755833c-2.48820374.345-4.5522629%202.034166-5.4297172%204.31.50247383.0525%201.70741107.066666%201.85823655.491666.15415864.4275-.53163898.870834-.53163898%201.760834%200%20.9875%201.26493412.975833%201.26493412%201.718333%200%20.743333.2733191%201.610833.2733191%201.858333%200%20.2475%201.05577834%201.613334%201.4482579%201.613334.39081298%200%20.08332899-1.526667.10416124-1.931667.01083277-.261667.18665695-1.0625.23748763-1.25.33831572-1.2775%201.60908286-1.1475%201.89906776-1.919167.91495231-2.426666-1.95573147-2.565-2.34654445-2.703333-.38997969-.136667-1.05411177-.141667-1.30576533-.058333-.25165356.081666-.75496067-.34-.75496067-.698334%200-.358333.99661475-1.070833%201.30576532-1.565833.3066507-.495.55163794-.423333%201.12160825-.939167.26165304-.239166.69246393-.368333.85578876-.686666zm-1.20910369%2013.230833c.67496484.224167%201.39659393.348333%202.14572158.348333%201.38826104%200%202.68236024-.418333%203.76147074-1.135833-.2999844-.545-1.414093-.62-1.9790636-.574167-.6691318.055-1.4299255.486667-1.85490337.579167-.47914171.105833-.82495703.2525-1.2499349.271667-.37164731.014166-.41331181.294166-.82329045.510833z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E") no-repeat;
-}
-/*Add_Video_Icon*/
-[dir] .video_add_external_icon {
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20hechoose_video_uploadight%3D%2224%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M0%200h24v24H0z%22%2F%3E%3Cpath%20d%3D%22M0%200h24v24H0z%22%2F%3E%3Cpath%20stroke%3D%22%234c8c4c%22%20stroke-width%3D%221.75%22%20d%3D%22M10%2014l4-4%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20stroke%3D%22%234c8c4c%22%20stroke-width%3D%221.75%22%20d%3D%22M16.5%2013.5c3-3%203.5-5.5%201.5-7.5s-4.5-1.5-7.5%201.5M7.5%2010.5C4.5%2013.5%204%2016%206%2018s4.5%201.5%207.5-1.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-}
-/*Check_Media_BTN*/
-[dir] .selected .media_check_btn_wrap .media_check_btn {
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2222%22%20height%3D%2222%22%20viewBox%3D%220%200%2022%2022%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Crect%20width%3D%2222%22%20height%3D%2222%22%20fill%3D%22%234c8c4c%22%20rx%3D%2211%22%2F%3E%3Cpath%20stroke%3D%22%23FFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M6%2012l3%203%207-7%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-}
-/*Check_BTN_Message*/
-[dir] .eltt .eltt_fancy_action.radiobtn.on::before {
-	background: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%234c8c4c%22%20d%3D%22M10%2016c-.3%200-.5-.1-.7-.3l-3.5-3.5c-.4-.4-.4-1%200-1.4s1-.4%201.4%200l2.8%202.8%206.3-6.3c.4-.4%201-.4%201.4%200s.4%201%200%201.4l-7%207c-.2.2-.4.3-.7.3z%22%2F%3E%3C%2Fsvg%3E") 50% no-repeat;
-}
-/*Veryfied_Page*/
-[dir] .page_verified,
-[dir] .feed_notifications .page_verified,
-[dir] .post_author .page_verified {
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2012%2012%22%3E%3Cdefs%3E%3Cstyle%3E.b%7Bfill%3Anone%3Bstroke%3A%234c8c4c%3Bstroke-linecap%3Around%3Bstroke-linejoin%3Around%3Bstroke-width%3A2px%3B%7D%3C%2Fstyle%3E%3C%2Fdefs%3E%3Ctitle%3Everified_12%3C%2Ftitle%3E%3Cpolyline%20class%3D%22b%22%20points%3D%222.25%206.75%204.5%209%209.75%203.75%22%2F%3E%3C%2Fsvg%3E");
-}
-/*Choose_BTN_1*/
-[dir] .radiobtn.on:hover::before {
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cdefs%3E%3Ccircle%20id%3D%22a%22%20cx%3D%227%22%20cy%3D%227%22%20r%3D%227%22%2F%3E%3C%2Fdefs%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cuse%20fill%3D%22%23F2F4F8%22%20xlink%3Ahref%3D%22%23a%22%2F%3E%3Ccircle%20cx%3D%227%22%20cy%3D%227%22%20r%3D%226.5%22%20stroke%3D%22%234c8c4c%22%2F%3E%3Ccircle%20cx%3D%227%22%20cy%3D%227%22%20r%3D%223%22%20fill%3D%22%234c8c4c%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-}
-/*Choose_BTN_2*/
-[dir] .radiobtn.on::before {
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cdefs%3E%3Ccircle%20id%3D%22a%22%20cx%3D%227%22%20cy%3D%227%22%20r%3D%227%22%2F%3E%3C%2Fdefs%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cuse%20fill%3D%22%23F2F4F8%22%20xlink%3Ahref%3D%22%23a%22%2F%3E%3Ccircle%20cx%3D%227%22%20cy%3D%227%22%20r%3D%226.5%22%20stroke%3D%22%234c8c4c%22%2F%3E%3Ccircle%20cx%3D%227%22%20cy%3D%227%22%20r%3D%223%22%20fill%3D%22%234c8c4c%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-}
-/*Add_History*/
-[dir] .stories_feed_preview_add {
-	background: var(--color4) url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3Eadd_24%3C%2Ftitle%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M0%200h24v24H0z%22%2F%3E%3Cpath%20d%3D%22M11%202.5V12H1.5a.5.5%200%201%200%200%201H11v9.5a.5.5%200%201%200%201%200V13h9.5a.5.5%200%201%200%200-1H12V2.5a.5.5%200%201%200-1%200z%22%20stroke%3D%22%234c8c4c%22%20stroke-width%3D%222%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat 50% / 16px;
-}
-/*Options_Checkbox*/
-[dir] .olist_item_wrap_on .olist_checkbox {
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2222%22%20height%3D%2222%22%20viewBox%3D%220%200%2022%2022%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Crect%20width%3D%2222%22%20height%3D%2222%22%20fill%3D%22%234c8c4c%22%20rx%3D%2211%22%2F%3E%3Cpath%20stroke%3D%22%23FFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M6%2012l3%203%207-7%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-}
-/*Serch_BTN_4*/
-[dir] .ui_search_new.ui_search_dark .ui_search_button_search {
-	border: 0;
-	background: url(data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%2224%22%20viewBox%3D%221284%20207%2024%2024%22%20width%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m1298.5%20222.9c-1%20.7-2.2%201.1-3.5%201.1-3.3%200-6-2.7-6-6s2.7-6%206-6%206%202.7%206%206c0%201.3-.4%202.5-1.1%203.5l2.8%202.7c.3.4.4%201.1%200%201.5-.4.3-1.1.3-1.5%200zm-3.5-.9c2.2%200%204-1.8%204-4s-1.8-4-4-4-4%201.8-4%204%201.8%204%204%204z%22%20fill%3D%22%234c8c4c%22%2F%3E%3C%2Fsvg%3E) var(--color4) no-repeat center;
-}
-/*Audio_Warn*/
-[dir] .audio_claim_popup {
-	background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%2284%22%20viewBox%3D%220%200%2084%2084%22%20width%3D%2284%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Ccircle%20cx%3D%2242%22%20cy%3D%2242%22%20fill%3D%22%234c8c4c%22%20r%3D%2242%22%2F%3E%3Cpath%20d%3D%22m51.902%2063.985c-.295%201.343-1.262%202.015-2.902%202.015h-14c-1.64%200-2.607-.672-2.902-2.015.186.01.375.015.569.015h18.666c.194%200%20.383-.005.57-.015zm3.742-4.095c-.578%201.407-1.86%202.11-3.844%202.11h-19.6c-1.984%200-3.266-.703-3.844-2.11.52.073%201.068.11%201.644.11h24c.576%200%201.125-.037%201.644-.11zm-31.644-31.89c0-4%202-6%206-6h24c4%200%206%202%206%206v24c0%204-2%206-6%206h-24c-4%200-6-2-6-6zm22%202c-4%200-4%200-4%204v8s-.84-1-3-1c-2.76%200-5%202.24-5%205s2.24%205%205%205%205-2.24%205-5v-10c0-2%200-2%202-2%204%200%204%200%204-2s0-2-4-2z%22%20fill%3D%22%23000%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E);
-}
-/*Add_to_PL*/
-[dir] .audio_page_player2 .audio_player_btn_added .btn_icon {
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2216%22%20height%3D%2237%22%20viewBox%3D%220%200%2016%2037%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M-4%2018h24v24H-4z%22%2F%3E%3Cpath%20d%3D%22M7%2029H2c-.552%200-1%20.448-1%201s.448%201%201%201h5v5c0%20.552.448%201%201%201s1-.448%201-1v-5h5c.552%200%201-.448%201-1s-.448-1-1-1H9v-5c0-.552-.448-1-1-1s-1%20.448-1%201v5z%22%20fill%3D%22%234c8c4c%22%20fill-rule%3D%22nonzero%22%2F%3E%3Cg%20transform%3D%22translate(-4%20-6)%22%3E%3Crect%20opacity%3D%22.5%22%20width%3D%2224%22%20height%3D%2224%22%20rx%3D%222%22%2F%3E%3Cpath%20stroke%3D%22%234c8c4c%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M5%2013l4%204L19%207%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-	background-position: 50% 6px;
-}
-/*Side_bar_Clips*/
-[dir] #side_bar #l_svd .left_icon {
-	background: url(data:image/svg+xml;charset=utf-8,%3Csvg%20fill%3D%22none%22%20height%3D%2216%22%20width%3D%2216%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22%234c8c4c%22%3E%3Cpath%20clip-rule%3D%22evenodd%22%20d%3D%22M6.697%205.29c.077.305.513.301.584-.006l.98-4.25a1.333%201.333%200%20012.629.401L10.5%206.5h.129a3.371%203.371%200%20013.368%203.563l-1.243-.723C11.08%208.367%209%209.584%209%2011.504v3.492c0%20.31.054.602.153.87A6.151%206.151%200%20017.87%2016H7c-3.705%200-5.5-3-5.5-5v-.188A3.062%203.062%200%20014.562%207.75h.424a1.037%201.037%200%2001.328%202.021l-.051.017a.75.75%200%2010.474%201.423l.051-.017a2.537%202.537%200%2000-.802-4.944h-.424c-.382%200-.754.047-1.11.136l-.34-4.44a1.344%201.344%200%20012.642-.428zm7.042%206.358a6.145%206.145%200%2001-3.167%203.726%201.007%201.007%200%2001-.072-.378v-3.492a.999.999%200%20011.5-.867z%22%20fill-rule%3D%22evenodd%22%2F%3E%3Cpath%20d%3D%22M15.002%2012.383a1.004%201.004%200%20010%201.734L12%2015.863a.999.999%200%2001-1.5-.867v-3.492a.999.999%200%20011.5-.867z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E) no-repeat 8px 5px;
-}
-/*Games_IMG_Star*/
-[dir] .GamesCatalogSearchStartScreenListItem--query .GamesCatalogSearchStartScreenListItem__image {
-	background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22m0%200h24v24h-24z%22%2F%3E%3Cpath%20d%3D%22m15.2487419%208.51918049%204.3014913.42223947c1.4967174.14691955%201.9557396%201.64280024.7999922%202.62557744l-3.3675847%202.8635887%201.250162%204.6650336c.4105562%201.5320084-.8631957%202.4594327-2.1389749%201.5374233l-4.0918507-2.9571923-4.09185057%202.9571923c-1.27062789.9182865-2.54958677-.0052073-2.13897492-1.5374233l1.25016195-4.6650336-3.36758468-2.8635887c-1.16060452-.9869074-.70338531-2.47799791.79975834-2.62557575l4.30069987-.42224044%201.89477981-4.46966964c.59337-1.39972354%202.1130048-1.39902216%202.7058809.00014473z%22%20fill%3D%22%23000%22%20fill-rule%3D%22nonzero%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-color: var(--color2);
-}
-/*Audio_trasition*/
-[dir] .audio_page_player2 .audio_player_btn_added .btn_icon {
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2216%22%20height%3D%2237%22%20viewBox%3D%220%200%2016%2037%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M-4%2018h24v24H-4z%22%2F%3E%3Cpath%20d%3D%22M7%2029H2c-.552%200-1%20.448-1%201s.448%201%201%201h5v5c0%20.552.448%201%201%201s1-.448%201-1v-5h5c.552%200%201-.448%201-1s-.448-1-1-1H9v-5c0-.552-.448-1-1-1s-1%20.448-1%201v5z%22%20fill%3D%22%234c8c4c%22%20fill-rule%3D%22nonzero%22%2F%3E%3Cg%20transform%3D%22translate(-4%20-6)%22%3E%3Crect%20opacity%3D%22.5%22%20width%3D%2224%22%20height%3D%2224%22%20rx%3D%222%22%2F%3E%3Cpath%20stroke%3D%22%234c8c4c%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M5%2013l4%204L19%207%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-	background-position: 50% 6px;
-}
-/*SUBSCRIBE_PLUS*/
+/*sub link*/
 [dir="ltr"] .GroupsRecommendationsBlock__subscribeLink {
-	padding-left: 12px;
-	background: url(data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%228%22%20height%3D%228%22%20viewBox%3D%220%200%208%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M4%200C3.50294%200%203.1%200.402943%203.1%200.9V3.1H0.9C0.402944%203.1%200%203.50294%200%204C0%204.49706%200.402943%204.9%200.9%204.9H3.1V7.1C3.1%207.59706%203.50294%208%204%208C4.49706%208%204.9%207.59706%204.9%207.1V4.9H7.1C7.59706%204.9%208%204.49706%208%204C8%203.50294%207.59706%203.1%207.1%203.1H4.9V0.9C4.9%200.402944%204.49706%200%204%200Z%22%20fill%3D%22%234c8c4c%22%2F%3E%0A%3C%2Fsvg%3E) no-repeat 0 5px;
+	background: url(https://cdn.discordapp.com/attachments/699506987632951328/969655183443394661/index_.png)  no-repeat 0 5px;
 }
-/*Arrow*/
-[dir] .audio_page_layout .audio_page_block__show_all_link_arrow,
-[dir] .audio_page_layout .audio_page_block__show_all_link::after {
-	background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%228%22%20viewBox%3D%2288%204%208%208%22%20width%3D%228%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%3E%3Cpath%20d%3D%22m88%204h8v8h-8z%22%2F%3E%3Cpath%20d%3D%22m90.2%2010.8c-.2.3-.2.7.1.9s.7.2.9-.1l2.6-3.2c.2-.2.2-.6%200-.8l-2.6-3.2c-.2-.3-.6-.3-.9-.1s-.3.6-.1.9l2.3%202.8z%22%20fill%3D%22%234c8c4c%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E);
-	margin-top: 8px;
+/*setting narrow*/
+[dir] .settings_narrow_row input[type="checkbox"]:checked + label::before {
+	background: url(https://cdn.discordapp.com/attachments/699506987632951328/969935711102959616/index.png) no-repeat center;
 }
-/*Search_Top_lens
-[dir] body.new_header_design .TopSearch__input {
-background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20opacity%3D%22.92%22%3E%3Cpath%20opacity%3D%22.1%22%20d%3D%22M0%200H16V16H0z%22%2F%3E%3Cpath%20d%3D%22M6.5%201a5.5%205.5%200%200%201%204.383%208.823l3.896%203.9a.75.75%200%200%201-1.061%201.06l-3.895-3.9A5.5%205.5%200%201%201%206.5%201zm0%201.5a4%204%200%201%200%200%208%204%204%200%200%200%200-8z%22%20fill%3D%22%2311eae7%22%20fill-rule%3D%22nonzero%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E);
+/*play track in chat*/
+[dir] .audio-msg-track--btn {
+	background: url(data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%2211%22%20viewBox%3D%220%200%2010%2011%22%20width%3D%2210%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m2.5.5v9l7-4.5z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E) var(--color2) no-repeat center;
 }
-*/
-/*Market_row*/
-[dir] .MarketCatalogCategoryMenu__button {
-	background: url(data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2216%22%20height%3D%2212%22%20viewBox%3D%220%200%2016%2012%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M15.5%201.25C15.5%200.835786%2015.1585%200.5%2014.7561%200.5H1.24385C0.833034%200.5%200.5%200.832899%200.5%201.25C0.5%201.66421%200.841479%202%201.24385%202H14.7561C15.167%202%2015.5%201.6671%2015.5%201.25ZM15.5%206.25C15.5%205.83579%2015.1585%205.5%2014.7561%205.5H1.24385C0.833034%205.5%200.5%205.8329%200.5%206.25C0.5%206.66421%200.841479%207%201.24385%207H14.7561C15.167%207%2015.5%206.6671%2015.5%206.25ZM0.5%2011.25C0.5%2011.6642%200.837462%2012%201.25513%2012H10.2449C10.6619%2012%2011%2011.6671%2011%2011.25C11%2010.8358%2010.6625%2010.5%2010.2449%2010.5H1.25513C0.838085%2010.5%200.5%2010.8329%200.5%2011.25Z%22%20fill%3D%22%234c8c4c%22%2F%3E%0A%3C%2Fsvg%3E) no-repeat 17px 50%;
+/*play in track post*/
+[dir] .audio_pl_snippet2 .audio_pl_snippet__action_btn_listen:hover::before{
+	background-image: url(https://cdn.discordapp.com/attachments/699506987632951328/972166361025486848/index.png)
 }
-/*Add_PlayButton_anim*/
-[dir] .audio_page_player2 .audio_page_player_add .btn_icon {
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2216%22%20height%3D%2237%22%20viewBox%3D%220%200%2016%2037%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M-4%2018h24v24H-4z%22%2F%3E%3Cpath%20d%3D%22M7%2029H2c-.552%200-1%20.448-1%201s.448%201%201%201h5v5c0%20.552.448%201%201%201s1-.448%201-1v-5h5c.552%200%201-.448%201-1s-.448-1-1-1H9v-5c0-.552-.448-1-1-1s-1%20.448-1%201v5z%22%20fill%3D%22%23828A99%22%20fill-rule%3D%22nonzero%22%2F%3E%3Cg%20transform%3D%22translate(-4%20-6)%22%3E%3Crect%20opacity%3D%22.5%22%20width%3D%2224%22%20height%3D%2224%22%20rx%3D%222%22%2F%3E%3Cpath%20stroke%3D%22%234c8c4c%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M5%2013l4%204L19%207%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+
+[dir="ltr"] .ui_header_ext_search {
+	background: url(https://cdn.discordapp.com/attachments/699506987632951328/970243625126596608/advanced_search.png) no-repeat;
+	background-position: left 22px;
+	background-position-x: left;
+	background-position-y: 22px;
 }
-/*join_Chat*/
-[dir] .im-invitation--join {
-	background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%20width%3D%2212%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m7%205v-4.1c0-.5-.4-.9-1-.9s-1%20.4-1%20.9v4.1h-4.1c-.5%200-.9.4-.9%201s.4%201%20.9%201h4.1v4.1c0%20.5.4.9%201%20.9s1-.4%201-.9v-4.1h4.1c.5%200%20.9-.4.9-1s-.4-1-.9-1z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E);
-	background-repeat: no-repeat;
-	background-position: 14px 9px;
-}
-[dir] .MarketCatalogSearchInput__field {
-	background: url(data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%2224%22%20viewBox%3D%221284%20207%2024%2024%22%20width%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m1298.5%20222.9c-1%20.7-2.2%201.1-3.5%201.1-3.3%200-6-2.7-6-6s2.7-6%206-6%206%202.7%206%206c0%201.3-.4%202.5-1.1%203.5l2.8%202.7c.3.4.4%201.1%200%201.5-.4.3-1.1.3-1.5%200zm-3.5-.9c2.2%200%204-1.8%204-4s-1.8-4-4-4-4%201.8-4%204%201.8%204%204%204z%22%20fill%3D%22%2399a2ad%22%2F%3E%3C%2Fsvg%3E) no-repeat 12px 50%;
-}
-[dir] .im-page--chat-header_verified .im-page--title-main-verified {
-	background: url(data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2012%2012%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m2.25%206.75%202.25%202.25%205.25-5.25%22%20fill%3D%22none%22%20stroke%3D%22%234c8c4c%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%2F%3E%3C%2Fsvg%3E) no-repeat;
-}
+
+
 /*vk_id,pay and e.t.c*/
 .vkuiPanelHeader__in {
 	background: none;
@@ -3954,7 +4154,7 @@ background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2216%22
 }
 .vkuiButton--lvl-secondary.vkuiButton--clr-accent {
 	background: #cb8355;
-	color: whitesmoke;
+	color: var(--color6);
 }
 [dir="ltr"] .ClassifiedsCatalogBlockList--stacked.ClassifiedsCatalogBlockList--classified,
 [dir] .CatalogPage__blocksMenu {
