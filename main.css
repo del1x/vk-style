@@ -1,30 +1,4 @@
-/* ==UserStyle==
-@name           VK.Dark
-@namespace      USO Archive
-@author         Eblan
-@description    `Loh pidr`
-@version        1.1.9.2
-@license        CC-BY-NC-4.0
-@preprocessor   uso
-@advanced dropdown Mini-Chat "Чаты" {
-	Visible "Показывать хуйню*" <<<EOT .FCPanel {
-    display: inherit;
-} EOT;
-Invisible "Не показывать хуйню" <<<EOT .FCPanel {
-    display: none;
-EOT; } 
-@advanced dropdown URL "Ну задник крч, долбанёшься" {
-default "Default*" <<<EOT https://media.discordapp.net/attachments/699506987632951328/963520512863113296/7hKnXP8DSgg.jpg EOT;
-
-	URL-custom-dropdown "Custom" <<<EOT /*[[URL-custom]]*\/ EOT;
-}
-@advanced text URL-custom "Выбери задник, KEKW (Custom)" "https://example.com/image.png"
-
-}
-
-==/UserStyle== */
-@-moz-document domain('vk.com') {}
-@-moz-document regexp('https?://vk.com/(?!dev/|dev$|editapp?|editapp\?id=\d+|editapp\?act=\S+|support\?act=new_app&app_id=\d+|stats\?aid=\d+|apps.act=manage|about$|about.act=manage|ads$|ads.z=|jobs$|jobs.act=manage|ads/targeting$|ads/targeting.act=manage|ads/company_page$|ads/company_page.act=manage|jobs$|ads/special_projects$|products.w=|products$|messenger$).*')  {
+{
 	body,
 	html[dir],
 	[dir] #page_wrap {
